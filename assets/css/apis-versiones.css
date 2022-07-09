@@ -1,27 +1,11 @@
 /* POCKETMINE-MP SERVERS API */
-.api4::before {
-    content: "4.5.2";
-}
-.api5::before {
-    content: "5.X.X";
-}
-.api6::before {
-    content: "6.X.X";
-}
-.api7::before {
-    content: "7.X.X";
-}
+.api4::before { content: "4.5.2"; }
+.api5::before { content: "5.X.X"; }
+.api6::before { content: "6.X.X"; }
+.api7::before { content: "7.X.X"; }
 
 /* DEDICATED BEDROCK SERVERS VERSIÓN */
-.v19::before {
-	content: "1.19.2";
-}
-.vXX::before {
-	content: "1.XX.X";
-}
-.vXX::before {
-	content: "1.XX.X";
-}
-.vXX::before {
-	content: "1.XX.X";
-}
+.v19::before { content: "1.19.2"; }
+.vXX::before { content: "1.XX.X"; }
+.vXX::before { content: "1.XX.X"; }
+.vXX::before { content: "1.XX.X"; }
