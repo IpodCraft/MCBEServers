@@ -41,43 +41,28 @@
                             <!-- //Tabs -->
                             <div class="tab-content">
                                 <!-- INICIO -->
-								<div class="tab-pane active" id="iniciopg" role="tabpanel"><div class="card-body">
-								
-								
-								
-								
-								
-								
-								<div class="divmitad"><div class="container">
-  <h1>FormSubmit Demo</h1>
-  <form target="_blank" action="https://formsubmit.co/your@mail.com" method="POST">
-    <div class="form-group">
-      <div class="form-row">
-        <div class="col">
-          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-        </div>
-        <div class="col">
-          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-  </form>
-</div></div>
-
- 
-
-
-
-<form class="form-horizontal form-material mx-2"><div class="form-group">
+								<div class="tab-pane active" id="iniciopg" role="tabpanel"><div class="card-body"><form onsubmit="return tests()" method="POST" action="https://formsubmit.co/mcbeservers.forms@gmail.com" class="form-horizontal form-material mx-2"><div class="form-group">
                                         
                                     <div class="divmitad"><h4>Hola y bienvenid@ a <b style="color: #26c6da">Bedrock Servers</b>, aqui encontraras servidores configurados de forma basica, para solo descargar, iniciarlo y empezar a jugar.</h4>
                                       <h4 style="color: rgba(255, 238, 0, 0.911)">(Obviamente se requiere activar puertos)</h4><hr>
                                     </div>
                                     <div class="divmitad">
+                                        <link href="formulario.css" rel="stylesheet">
+                                        <div class="form">
+                                            <img src="assets/images/formlogo.png" class="center value" id="server-logo"><br>
+                                            <input placeholder="Nombre" type="text" name="name" class="center value" id="server-name" maxlength="100"><br>
+                                            <textarea placeholder="Description" type="text" name="description" class="center value" id="server-description" maxlength="500" rows="4"></textarea><br>
+                                            <input placeholder="URL" type="url" name="url" class="center value" id="link-download" maxlength="150"><br>
+                                            <input placeholder="Correo Electronico" type="email" name="email" class="center value" id="email"><br>
+                                            <select id="version" name="version" class="center" style="width: 60px;">
+                                                <option value="PocketMine">PocketMine 4.0.0 -> 4.5.2</option>
+                                                <option selected value="vanilla">Dedicated Bedrock 1.19.0 -> 1.19.2</option>
+                                            </select>
+                                            <input type="checkbox" class="center" id="condition" name="condition"><a href="#" class="condition">Aceptar Terminos</a><br>
+                                            <button class="btn btn-success text-white">Subir Servidor</button>
+                                            <input type="hidden" name="_captcha" value="false">
+                                            <input type="hidden" name="_next" value="https://mcbeservers.ml">
+                                        </div>
                                     </div>
                                 </div></form></div></div>
 								<!-- //INICIO -->

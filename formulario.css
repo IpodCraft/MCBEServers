@@ -1,1 +1,22 @@
-Aqui van los estilos del formulario
+div.form {
+  border: 7px;
+  border-style: solid;
+  border-color: aqua;
+  width: 350px;
+}
+.center {
+  padding-left: auto;
+  padding-right: auto;
+}
+.value{
+  width: 260px
+}
+#server-logo{
+  width: 150px
+}
+a.condition{
+  color: black;
+}
+a.condition:hover{
+  color: inherit;
+}
