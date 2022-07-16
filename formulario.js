@@ -12,4 +12,3 @@ input.addEventListener('change', (e) => {
     }
 
     // TODO: continue uploading on server
-});
