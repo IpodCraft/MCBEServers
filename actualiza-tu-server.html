@@ -22,7 +22,9 @@
                         <a class="nav-toggler waves-effect waves-light text-white d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a></div></nav></header>
                             <aside class="left-sidebar" data-sidebarbg="skin6"><div class="scroll-sidebar"><nav class="sidebar-nav"><ul id="sidebarnav">
                                <li class="sidebar-item"> <a href="/" class="sidebar-link waves-effect waves-dark sidebar-link active">
-						       <i class="mdi me-2 mdi-home"></i><span class="hide-menu">Inicio</span></a></li></ul></nav></div>
+						       <i class="mdi me-2 mdi-home"></i><span class="hide-menu">Inicio</span></a></li>
+                               <li class="sidebar-item"> <a href="/equipo/" class="sidebar-link waves-effect waves-dark sidebar-link">
+						       <i class="mdi me-2 mdi-account-multiple"></i><span class="hide-menu">Equipo</span></a></li></ul></nav></div>
 			                <div class="sidebar-footer"><div class="row"><div class="col-4 link-wrap">
                                <a href="https://www.youtube.com/channel/UCnKF7uT43mOMrlIU_4I5Y2w" target="_blank" class="link" data-toggle="tooltip" title="" data-original-title="Canal de YouTube"><i class="mdi mdi-youtube-play"></i></a></div><div class="col-4 link-wrap">
                                <a href="" target="_blank" class="link" data-toggle="tooltip" title="" data-original-title="Discord"><i class="mdi mdi-discord"></i></a></div><div class="col-4 link-wrap">
@@ -36,21 +38,44 @@
                             <ul class="nav nav-tabs profile-tab" role="tablist">
                                 <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#pocketmine" role="tab"><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/PM.png" width="30px"/> PocketMine</a></li>
                                 <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#dedicated_bedrock" role="tab"><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/DBS.png" width="30px"/> Dedicated Bedrock</a></li>
-								<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#enviar-server" role="tab"><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/SD.png" width="30px"/> Enviar Servidor</a></li>
-								<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#actualizar-server" role="tab"><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/SD.png" width="30px"/> Actualizar Servidor</a></li>
-								<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#equipo" role="tab"><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/SD.png" width="30px"/> Equipo</a></li>
+								<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#serverbase" role="tab"><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/CSB.png" width="30px"/> Server Base</a></li>
+                                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#settings" role="tab"><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/SD.png" width="30px"/> Software Download</a></li>
                             </ul>
                             <!-- //Tabs -->
                             <div class="tab-content">
 							<!-- INICIO -->
-                                <div class="tab-pane active" id="iniciopg" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"><div class="row"><div class="col-xs-12 col-lg-7">
+                                <div class="tab-pane active" id="iniciopg" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"><div class="row"><div class="col-xs-12 col-lg-6">
 								  <center><h4>Hola y bienvenid@ a <b style="color: #26c6da">Bedrock Servers</b>, aqui encontraras servidores configurados de forma basica, para solo descargar, iniciarlo y empezar a jugar.</h4>
                                   <h4 style="color: rgba(255, 238, 0, 0.911)">(Obviamente se requiere activar puertos)</h4>
+								  
+								  
+								  <a href="LINK"><button class="btn btn-success btn-espacio2 text-light"><i class=""></i> Software Download</button></a>
+								  <a href="LINK"><button class="btn btn-success text-light"><i class=""></i> Software Download</button></a>
+								  
+								  <style>
+								  .btn-espacio2 {
+									 margin: 10px;
+								  }
+								  </style>
+								  
 								  <hr></center></div>
-								<div class="col-xs-12 col-lg-5">
-								    <center><b>Envia tu Server:</b><p>Se usa para enviar un nuevo servidor para que sea publicado en la página.</p><b>Actualiza tu Server:</b><p>Se usa para editar o actualizar los datos de un servidor que ya ha sido publicado. (Esto solo puede editarlo/actualizarlo la personas que lo mando)</p><a href="/envia-nuevo-server/"><button class="btn btn-success btn-espacio1 text-light"><i class=""></i> Envia tu Server</button></a>
-								    <a href="/actualiza-tu-server/"><button class="btn btn-success text-light"><i class=""></i> Actualiza tu Server</button></a></center>
-								</div></div></div></div></div>
+								<div class="col-xs-12 col-lg-6"><div class="form">
+								    <center><form onsubmit="return tests()" method="POST" action="https://formsubmit.co/mcbeservers.forms@gmail.com" class="form-horizontal form-material mx-2" enctype="multipart/form-data"><div class="form-group">
+                                    <img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo"><br><input placeholder="Nombre del servidor" type="text" name="name" class="center value" id="server-name" maxlength="100" required><br><br>
+                                    <textarea placeholder="Descripción" type="text" name="description" class="center value" id="server-description" maxlength="500" rows="4" required></textarea><br><br>
+                                    <input placeholder="Link de descarga" type="url" name="url" class="center value prueba" id="link-download" maxlength="150" required><br><br>
+                                    <input placeholder="Correo Electronico" type="email" name="email" class="center value" id="email" required><br><br>
+                                    <select id="version" name="version" class="center" style="width: 80%;" required><option disabled selected value> -- Selecciona el Software -- </option>
+									<option value="PocketMine-MP">PocketMine 4.0.0 -> 4.5.2</option><option value="vanilla">Dedicated Bedrock 1.19.0 -> 1.19.2</option>
+                                    </select>
+			            <br><br>
+                                    <input type="checkbox" class="cuadrito center" id="condition" name="condition" required><span style="color: black"> Aceptó los Terminos -</span><a data-bs-toggle="modal" data-bs-target="#vertical-center-modal" style="color: #00ADB5" href="#" class="condition"> Leer Terminos</a><br><br>
+									<button class="btn btn-success btn-block text-white">Enviar Servidor</button><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://mcbeservers.ml">
+                                </div></form></center></div></div></div></div></div></div><div class="modal fade" id="vertical-center-modal" tabindex="-1" aria-labelledby="vertical-center-modal" style="display: none;" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header d-flex align-items-center">
+						            <h4 class="modal-title" id="myLargeModalLabel">Terminos y condiciones</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                <div class="modal-body"><h4>Lee los terminos antes de marcar la casilla.</h4>
+                                    <p>Al marcar la casilla, aceptas que se descargue el servidor mandado en el formulario, para ser resubido y publicado con un enlace diferente al enviado en el formulario.</p>
+							    </div><div class="modal-footer"><button type="button" class="btn btn-success text-light font-weight-medium waves-effect text-start" data-bs-dismiss="modal">Cerrar</button></div></div></div></div>
 								<!-- //INICIO -->
 								
 								<!-- POCKETMINE-MP -->
@@ -63,7 +88,7 @@
 													<div class="col-lg-3 col-md-6 mb-3"><img src="https://media.airedesantafe.com.ar/p/8639febeae789decce31551e14f3b300/adjuntos/268/imagenes/003/416/0003416558/412x232/smart/minecraftpng.png" alt="user" class="img-responsive radius w-100 zoomable"></div>
 													<div class="col-lg-3 col-md-6 mb-3"><img src="https://media.airedesantafe.com.ar/p/8639febeae789decce31551e14f3b300/adjuntos/268/imagenes/003/416/0003416558/412x232/smart/minecraftpng.png" alt="user" class="img-responsive radius w-100 zoomable"></div>
 													<div class="col-lg-3 col-md-6 mb-3"><img src="https://media.airedesantafe.com.ar/p/8639febeae789decce31551e14f3b300/adjuntos/268/imagenes/003/416/0003416558/412x232/smart/minecraftpng.png" alt="user" class="img-responsive radius w-100 zoomable"></div><div class="col-md-9 col-xs-12">
-                                                    <p>DESCRIPCIÓN</p>
+                                                    <p>DESCRPCIÓN</p>
                                             </div></div><blockquote class="mt-2">
                                                     <p>API Versión: <b>4.0.0</b> -> <b class="api4"></b></p>
 													<p>Tamaño del Archivo: <b>00.0MB</b></p>
@@ -95,64 +120,31 @@
 								</div></div></div>
 								<!-- //DEDICATED BEDROCK SERVER -->
 								
-								
-								<!-- ENVIAR SERVER -->
-                                <div class="tab-pane" id="enviar-server" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"><div class="row">
-								<div class="col-xs-12 col-lg-6"><div class="form">
-								    <center><form onsubmit="return tests()" method="POST" action="https://formsubmit.co/mcbeservers.forms@gmail.com" class="form-horizontal form-material mx-2" enctype="multipart/form-data"><div class="form-group">
-                                    <img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo"><br><input placeholder="Nombre del servidor" type="text" name="name" class="center value" id="server-name" maxlength="100" required><br><br>
-                                    <textarea placeholder="Descripción" type="text" name="description" class="center value" id="server-description" maxlength="500" rows="4" required></textarea><br><br>
-                                    <input placeholder="Link de descarga" type="url" name="url" class="center value prueba" id="link-download" maxlength="150" required><br><br>
-                                    <input placeholder="Correo Electronico" type="email" name="email" class="center value" id="email" required><br><br>
-                                    <select id="version" name="version" class="center" style="width: 80%;" required><option disabled selected value> -- Selecciona el Software -- </option>
-									<option value="PocketMine-MP">PocketMine 4.0.0 -> 4.5.2</option><option value="vanilla">Dedicated Bedrock 1.19.0 -> 1.19.2</option>
-                                    </select><br><br>
-                                    <input type="checkbox" class="cuadrito center" id="condition" name="condition" required><span style="color: black"> Aceptó los Terminos -</span><a data-bs-toggle="modal" data-bs-target="#vertical-center-modal" style="color: #00ADB5" href="#" class="condition"> Leer Terminos</a><br><br>
-									<button class="btn btn-success btn-block text-white">Enviar Servidor</button><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://mcbeservers.ml">
-                                </div></form></center></div></div>
-								
-								<div class="col-xs-12 col-lg-6">
-								  <center><h4>Hola y bienvenid@ a <b style="color: #26c6da">Bedrock Servers</b>, aqui encontraras servidores configurados de forma basica, para solo descargar, iniciarlo y empezar a jugar.</h4>
-                                  <h4 style="color: rgba(255, 238, 0, 0.911)">(Obviamente se requiere activar puertos)</h4>
-								  
-								  <hr></center></div>
-								
-								
-								</div></div></div></div><div class="modal fade" id="vertical-center-modal" tabindex="-1" aria-labelledby="vertical-center-modal" style="display: none;" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header d-flex align-items-center">
-						            <h4 class="modal-title" id="myLargeModalLabel">Terminos y condiciones</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                <div class="modal-body"><h4>Lee los terminos antes de marcar la casilla.</h4>
-                                    <p>Al marcar la casilla, aceptas que se descargue el servidor mandado en el formulario, para ser resubido y publicado con un enlace diferente al enviado en el formulario.</p>
-							    </div><div class="modal-footer"><button type="button" class="btn btn-success text-light font-weight-medium waves-effect text-start" data-bs-dismiss="modal">Cerrar</button></div></div></div></div>
-								<!-- //ENVIAR SERVER -->
-			<!-- EQUIPO -->
-              <div class="tab-pane" id="equipo" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0">		
-              <div class="container-fluid"><div class="row"><div class="col-lg-4 col-xlg-3 col-md-5"><div class="card"><div class="card-body"><center class="mt-4"><img src="https://avatars.githubusercontent.com/u/88064157?v=4" class="rounded-circle" width="150">
-                <h4 class="card-title mt-2">AgaCraft</h4><h6 class="card-subtitle">Desarrollador</h6></center></div><div><hr></div><div class="card-body"><center><small class="text-muted pt-4 db">Redes Sociales</small>
-                <br><a href="https://shortmcbe.ml/agacraftpg" target="_blank"><button style="color: #EEEEEE" class="btn btn-success"><i style="color: #EEEEEE" class="mdi mdi-web"></i> Página</button></a>
-                <a href="https://shortmcbe.ml/ac07gh" target="_blank"><button style="color: #EEEEEE" class="btn-espacio1 btn btn-primary"><i style="color: #EEEEEE" class="fab fa-github"></i> Github</button></a>
-                <a href="https://shortmcbe.ml/ac07yt" target="_blank"><button style="color: #EEEEEE" class="btn btn-danger"><i style="color: #EEEEEE" class="fab fa-youtube"></i> YouTube</button></a></center>
-              </div></div></div><div class="col-lg-4 col-xlg-3 col-md-5"><div class="card"><div class="card-body"><center class="mt-4">
-                <img src="https://avatars.githubusercontent.com/u/57160583?v=4" class="rounded-circle" width="150"><h4 class="card-title mt-2">JunMC13</h4><h6 class="card-subtitle">Creador</h6></center></div><div><hr></div>
-              <div class="card-body"><center><small class="text-muted pt-4 db">Redes Sociales</small><br>
-                <a href="https://shortmcbe.ml/jmc13yt" target="_blank"><button style="color: #EEEEEE" class="btn-espacio1 btn btn-danger"><i style="color: #EEEEEE" class="fab fa-youtube"></i> YouTube</button></a></center></div></div></div>
-              <div class="col-lg-4 col-xlg-3 col-md-5"><div class="card"><div class="card-body"><center class="mt-4">
-                <img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/Foxiok010.jpg" class="rounded-circle" width="150"><h4 class="card-title mt-2">Foxiok010</h4><h6 class="card-subtitle">Publicador</h6>
-                </center></div><div><hr></div><div class="card-body"><center><small class="text-muted pt-4 db">Redes Sociales</small><br><p>Sin redes sociales publicas.</p></center>
-              </div></div></div></div></div></div></div></div>
-            <!-- //EQUIPO -->
-			<!-- ENVIADO -->
-			   <div class="tab-pane" id="server-enviado" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0">	
-			      <center><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/enviado-palomita.gif" width="200px" class="btn-espacio"><h2>Gracias por enviar tu servidor.</h2>
-				  <h4>En máximo 24hrs se te enviará un correo para notificarte si fue aceptado o rechazado.</h4></center>
-			   </div></div></div>
-			<!-- //ENVIADO -->
-			<!-- ACTUALIZADO -->
-			   <div class="tab-pane" id="server-actualizado" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0">	
-			      <center><img src="https://junmc13.github.io/Mis-Assets/MCBE_Servers/images/enviado-palomita.gif" width="200px" class="btn-espacio"><h2>La actualización se envio correctamente.</h2>
-				  <h4>En máximo 24hrs se te enviará un correo para notificarte que los datos ya fuerón actualizados.</h4></center>
-			   </div></div></div>
-			<!-- //ACTUALIZADO -->
-    </div></div></div></div></div>
+								<!-- SERVER BASE -->
+								<div class="tab-pane" id="serverbase" role="tabpanel"><div class="card-body"><form class="form-horizontal form-material mx-2"><div class="form-group">
+                                        <label class="col-md-12"><b>Archivos Base PocketMine-PM</b></label>
+										<p>- Descargar el el archivo zip del botón <b>"Base PocketMine-MP"</b> y descomprimir.</p>
+										<p>- Instalar el archivo "VC_redist.x64".</p>
+										<p>- Descargar el .phar más reciente de PocketMine-MP <a href="https://github.com/pmmp/PocketMine-MP/releases" target="_blank"> Aqui</a></p>
+										<a href="https://github.com/pmmp/PocketMine-MP/releases" target="_blank" class="btn btn-success text-white"> Base PocketMine-MP</a>
+                                </div><hr>
+                                <div class="form-group"><label class="col-md-12"><b>Archivos Base Dedicated Bedrock Server</b></label>
+										<p>Descarga Dedicated Bedrock Server desde la página oficial de Minecraft.</p>
+										<a href="https://www.minecraft.net/es-mx/download/server/bedrock" target="_blank" class="btn btn-success text-white"> Descargar Dedicated Bedrock Server</a>
+                                </div></form></div></div>
+								<!-- //SERVER BASE -->
+								<!-- Settings -->
+                                <div class="tab-pane" id="settings" role="tabpanel"><div class="card-body"><form class="form-horizontal form-material mx-2"><div class="form-group">
+                                        <label class="col-md-12"><b>PocketMine-PM</b></label>
+										<p>Descarga PocketMine-MP desde el repositorio oficial en Github.</p>
+										<a href="https://github.com/pmmp/PocketMine-MP/releases" target="_blank" class="btn btn-success text-white"> Descargar PocketMine</a>
+                                </div><hr><div class="form-group">
+                                        <label class="col-md-12"><b>Dedicated Bedrock Server</b></label>
+										<p>Descarga Dedicated Bedrock Server desde la página oficial de Minecraft.</p>
+										<a href="https://www.minecraft.net/es-mx/download/server/bedrock" target="_blank" class="btn btn-success text-white"> Descargar Dedicated Bedrock Server</a>
+                                </div></form></div></div>
+                                <!-- //Settings -->
+                            </div></div></div></div></div>
             <!-- FOOTER -->
             <footer class="footer"> © 2023 Todos los derechos reservados para <a href="https://www.youtube.com/channel/UCnKF7uT43mOMrlIU_4I5Y2w">JunMC13 </a></footer>
             <!-- //FOOTER --></div></div>
@@ -168,3 +160,6 @@
 		type: 'image', closeOnContentClick: true, closeBtnInside: false, mainClass: 'mfp-with-zoom mfp-img-mobile', image: { verticalFit: true, titleSrc: function(item) { return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>'; }}, zoom: { enabled: true }});
 	</script>
 </html>
+
+
+
