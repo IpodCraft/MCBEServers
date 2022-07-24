@@ -38,37 +38,10 @@
                             <!-- //Tabs -->
                             <div class="tab-content">
 							<!-- INICIO -->
-                                <div class="tab-pane active" id="iniciopg" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"><div class="row"><div class="col-xs-12 col-lg-7">
-								  <center><h4>Hola y bienvenid@ a <b style="color: #1e88e5">Bedrock Servers</b>, aqui encontraras servidores configurados de forma basica, para solo descargar, iniciarlo y empezar a jugar.</h4>
-                                  <h4 style="color: rgba(255, 238, 0, 0.911)">(Obviamente se requiere activar puertos)</h4>
-								  <hr></center></div>
-								<div class="col-xs-12 col-lg-5">
-								<div class="container">
-  <h1>FormSubmit Demo</h1>
-  <form target="_blank" action="https://formsubmit.co/mcbeservers.actualizaciones@gmail.com" method="POST">
-    <div class="form-group">
-      <div class="form-row">
-        <div class="col">
-          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-        </div>
-        <div class="col">
-          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-  </form>
-</div>
-								
-								
-								
-								
-								    <center><b>Envia tu Server:</b><p>Se usa para enviar un nuevo servidor para que sea publicado en la página.</p><b>Actualiza tu Server:</b><p>Se usa para editar o actualizar los datos de un servidor que ya ha sido publicado. (Esto solo puede editarlo/actualizarlo la personas que lo mando)</p><a href="/envia-nuevo-server/"><button class="btn btn-success btn-espacio1 text-light"><i class=""></i> Envia tu Server</button></a>
-								    <a href="/actualiza-tu-server/"><button class="btn btn-success text-light"><i class=""></i> Actualiza tu Server</button></a></center>
-								</div></div></div></div></div>
+                                <div class="tab-pane active" id="iniciopg" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"><div class="row"><div class="col-xs-12 col-lg-12">
+								  <center><h4>Hola y bienvenid@ a <b style="color: #1e88e5">MCBE Servers</b>, aqui encontraras servidores configurados de forma básica, tanto de PocketMine-MP como de Dedicated Bedrock.</h4>
+								  <h5>En <b style="color: #1e88e5">MCBE Servers</b> no se aceptan networks, por lo que no las encontraras configuradas o pre-configuradas.</h5>
+								  <hr></center></div></div></div></div></div>
 								<!-- //INICIO -->
 								
 								<!-- POCKETMINE-MP -->
@@ -127,16 +100,16 @@
                                     </select><br><br>
                                     <input type="checkbox" class="cuadrito center" id="condition" name="Términos" required><span style="color: black"> Aceptó los Terminos -</span><a data-bs-toggle="modal" data-bs-target="#vertical-center-modal" style="color: #00ADB5" href="#" class="condition"> Leer Términos</a><br><br>
 									<button class="btn btn-success btn-block text-white">Enviar Servidor</button><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://mcbeservers.ml/enviado">
-                                </div></form></center></div></div>
-								<div class="col-xs-12 col-lg-6">
-								  <center><h4>Hola y bienvenid@ a <b style="color: #1e88e5">Bedrock Servers</b>, aqui encontraras servidores configurados de forma basica, para solo descargar, iniciarlo y empezar a jugar.</h4>
-                                  <h4 style="color: rgba(255, 238, 0, 0.911)">(Obviamente se requiere activar puertos)</h4>
-								  <hr></center></div>
-								</div></div></div></div><div class="modal fade" id="vertical-center-modal" tabindex="-1" aria-labelledby="vertical-center-modal" style="display: none;" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header d-flex align-items-center">
-						            <h4 class="modal-title" id="myLargeModalLabel">Terminos y condiciones</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                <div class="modal-body"><h4>Lee los terminos antes de marcar la casilla.</h4>
-                                    <p>Al marcar la casilla, aceptas que se descargue el servidor mandado en el formulario, para ser resubido y publicado con un enlace diferente al enviado en el formulario.</p>
-							    </div><div class="modal-footer"><button type="button" class="btn btn-success text-light font-weight-medium waves-effect text-start" data-bs-dismiss="modal">Cerrar</button></div></div></div></div>
+                                </div></form></center></div><hr></div>
+								<div class="col-xs-12 col-lg-6"><center><h4>¿Quieres enviar tu servidor para que se suba a la página?</h4><i>Aqui te enseño a como subirlo.</i></center><br><br><br>
+								<li><b>Nombre del servidor:</b> En este apartado se debe escribir el nombre/titulo del servidor que quieras publicar. (max.100)</li>
+								<br><li><b>Descripción:</b> En este apartado se debe poner cualquier información del servidor configurado, ya sea la lista de modalidades, plugins/addons o cualquier otra cosa. (max.500)</li>
+								<br><li><b>Link de descarga:</b> Aqui va el link de descarga del servidor a publicar, para que un tester descargue y compruebe que u servidor sea funcional. (max.150)</li>
+								<br><li><b>Correo Electronico:</b> Debes escribir un correo electronico que uses, ya que se te enviara un correo con un "ID de Usuario" y "ID de Server" para cuando quieras actualizar los datos de tu servidor que publicaste.</li>
+								<br><li><b>-- Selecciona el Software --:</b> Aqui se debe seleccionar el tipo de software y versión que ocupa el servidor que estas enviando.</li>
+								<br><li><b>Aceptó los Terminos:</b> Este apartado se debe leer, comprender y aceptar.</li>
+								<br><center><h5><b>Y para finalizar, debes presionar el botón "Enviar Servidor".</b></h5></center>
+								</div></div></div></div></div>
 								<!-- //ENVIAR SERVER -->
 								<!-- ACTUALIZAR SERVER -->
                                 <div class="tab-pane" id="actualizar-server" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"><div class="row">
@@ -153,17 +126,19 @@
 									<option value="PocketMine-MP API:4">PocketMine 4.0.0 -> 4.6.1</option><option value="Dedicated Bedrock V19">Dedicated Bedrock 1.19.0 -> 1.19.10</option>
                                     </select><br><br>
                                     <input type="checkbox" class="cuadrito center" id="condition" name="Términos" required><span style="color: black"> Aceptó los Terminos -</span><a data-bs-toggle="modal" data-bs-target="#vertical-center-modal" style="color: #00ADB5" href="#" class="condition"> Leer Términos</a><br><br>
-									<button class="btn btn-success btn-block text-white">Enviar Servidor</button><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://mcbeservers.ml/actualizado">
+									<button class="btn btn-success btn-block text-white">Actualizar Servidor</button><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://mcbeservers.ml/actualizado">
                                 </div></form></center></div></div>
-								<div class="col-xs-12 col-lg-6">
-								  <center><h4>Hola y bienvenid@ a <b style="color: #1e88e5">Bedrock Servers</b>, aqui encontraras servidores configurados de forma basica, para solo descargar, iniciarlo y empezar a jugar.</h4>
-                                  <h4 style="color: rgba(255, 238, 0, 0.911)">(Obviamente se requiere activar puertos)</h4>
-								  <hr></center></div>
-								</div></div></div></div><div class="modal fade" id="vertical-center-modal" tabindex="-1" aria-labelledby="vertical-center-modal" style="display: none;" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header d-flex align-items-center">
-						            <h4 class="modal-title" id="myLargeModalLabel">Terminos y condiciones</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                <div class="modal-body"><h4>Lee los terminos antes de marcar la casilla.</h4>
-                                    <p>Al marcar la casilla, aceptas que se descargue el servidor mandado en el formulario, para ser resubido y publicado con un enlace diferente al enviado en el formulario.</p>
-							    </div><div class="modal-footer"><button type="button" class="btn btn-success text-light font-weight-medium waves-effect text-start" data-bs-dismiss="modal">Cerrar</button></div></div></div></div>
+								<div class="col-xs-12 col-lg-6"><center><h4>¿Quieres actualizar un servidor que publicaste con anterioridad?</h4><i>Aqui te enseño a como actualizar los datos.</i></center><br><br><br>
+								<li><b>Nombre del servidor:</b> En este apartador puedes ocupar el mismo nombre  del servidor o cambiarlo. (max.100)</li>
+								<br><li><b>Descripción:</b> Aqui puedes actualizar la descripción de tu servidor. (max.500)</li>
+								<br><li><b>Link de descarga:</b> Aqui va el link de descarga del servidor a actualizar, para que un tester descargue y compruebe que tu servidor sea funcional. (max.150)</li>
+								<br><li><b>Correo Electronico:</b> Si ya no cuentas con el correo electronico con el que enviaste el servidor que quieres actualizar,, puedes ocupar uno diferente, ya que para comprobar que es tu servidor, se debe usar el "ID de Usuario" y "ID de Server" que se te envio cuando fue publicado.</li>
+								<br><li><b>ID de Usuario:</b> Aqui se debe poner el ID de Usuario que se te proporcionó en tu correo electronico cuando enviaste por primera vez el servidor que estas por actualizar. (Este dato es privado)</li>
+								<br><li><b>ID de Server:</b> Aqui se debe poner el ID de Server que se te proporcionó en tu correo electronico cuando enviaste por primera vez el servidor que estas por actualizar. (Este dato es privado)</li>
+								<br><li><b>-- Selecciona el Software --:</b> Aqui se debe seleccionar el tipo de software y versión que ocupa el servidor que estas actualizando.</li>
+								<br><li><b>Aceptó los Terminos:</b> Este apartado se debe leer, comprender y aceptar.</li>
+								<br><center><h5><b>Y para finalizar, debes presionar el botón "Actualizar Servidor".</b></h5></center>
+								</div></div></div></div></div>
 								<!-- //ACTUALIZAR SERVER -->
 			<!-- EQUIPO -->
               <div class="tab-pane" id="equipo" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0">		
@@ -182,6 +157,14 @@
               </div></div></div></div></div></div></div></div>
             <!-- //EQUIPO -->
     </div></div></div></div></div>
+	       <!-- TERMINOS -->
+		   <div class="modal fade" id="vertical-center-modal" tabindex="-1" aria-labelledby="vertical-center-modal" style="display: none;" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header d-flex align-items-center">
+			 <h4 class="modal-title" id="myLargeModalLabel">Terminos</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+           <div class="modal-body"><h4>Lee los terminos antes de marcar la casilla.</h4>
+		     <p>Al marcar la casilla, estas aceptando que el "Link de descarga" enviado en el formulario no sea utilizado en la descarga publicada de tu servidor, Y aceptas que tu servidor sea resubido en nuestra nube de prefencia, para asi evitar links caidos o borrrados.</p>
+		   </div><div class="modal-footer"><button type="button" class="btn btn-success text-light font-weight-medium waves-effect text-start" data-bs-dismiss="modal">Cerrar</button></div></div></div></div>
+		   <!-- //TERMINOS -->
+	
             <!-- FOOTER -->
             <footer class="footer"> © 2023 Todos los derechos reservados para <a href="https://www.youtube.com/channel/UCs6I63ly-Gd1iLcfy76TxPg" target="_blank">IpodCraft </a></footer>
             <!-- //FOOTER --></div></div>
