@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Actualización</title>
+</head>
+<body>
+    <div class="card-body">
+        <div class="profiletimeline border-start-0">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6 espacio-izquierdo espacio-ejey">
+                    <div class="form">
+                        <center>
+                            <form
+                                onsubmit="return tests()"
+                                method="POST"
+                                action="https://formsubmit.co/mcbeservers.actualizaciones@gmail.com"
+                                class="form-horizontal form-material mx-2"
+                                enctype="multipart/form-data"
+                            >
+                                <div class="form-group">
+                                    <img src="https://junsp13.github.io/Mis-Assets/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
+                                    <br>
+                                    <input
+                                        placeholder="Nombre del servidor"
+                                        type="text"
+                                        name="Nombre del server"
+                                        class="center value"
+                                        id="server-name"
+                                        maxlength="100"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <textarea
+                                        placeholder="Descripción"
+                                        type="text"
+                                        name="Descripción"
+                                        class="center value"
+                                        id="server-description"
+                                        maxlength="500"
+                                        rows="4"
+                                        required
+                                    ></textarea>
+                                    <br>
+                                    <br>
+                                    <input
+                                        placeholder="Link de descarga"
+                                        type="url"
+                                        name="Link de descarga"
+                                        class="center value prueba"
+                                        id="link-download"
+                                        maxlength="150"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <div id="file-div">
+                                        <img id="actualizar-1-img" src="" style="opacity:0">
+                                        <input
+                                            id="actualizar-1"
+                                            type="file"
+                                            name="mini1"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="actualizar-2-img" src="" style="opacity:0">
+                                        <input
+                                            id="actualizar-2"
+                                            type="file"
+                                            name="mini2"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="actualizar-3-img" src="" style="opacity:0">
+                                        <input
+                                            id="actualizar-3"
+                                            type="file"
+                                            name="mini3"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="actualizar-4-img" src="" style="opacity:0">
+                                        <input
+                                            id="actualizar-4"
+                                            type="file"
+                                            name="mini4"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <input
+                                        placeholder="Correo Electronico"
+                                        type="email"
+                                        name="Correo"
+                                        class="center value"
+                                        id="email"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <input
+                                        placeholder="ID de Usuario"
+                                        type="text"
+                                        name="ID de Usuario"
+                                        class="form-izquierda value2"
+                                        id="id-usuario"
+                                        maxlength="9"
+                                        required
+                                    >
+                                    <input
+                                        placeholder="ID de Server"
+                                        type="text"
+                                        name="Server ID"
+                                        class="form-derecha value2"
+                                        id="id-server"
+                                        maxlength="6"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <select
+                                        id="version"
+                                        name="Software"
+                                        class="center"
+                                        style="width: 80%;"
+                                        required
+                                    >
+                                        <option
+                                            disabled
+                                            selected
+                                            value
+                                            hidden
+                                        > -- Selecciona el Software --</option>
+                                        <option value="PocketMine-MP API4">PocketMine {{API}}</option>
+                                        <option value="Dedicated Bedrock V19">Dedicated Bedrock {{MCBE}}</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <input
+                                        type="checkbox"
+                                        class="cuadrito center"
+                                        id="condition"
+                                        name="Términos"
+                                        required
+                                    >
+                                    <span style="color: black"> Aceptó los Términos y Condiciones.</span>
+                                    <br><a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#vertical-center-modal"
+                                        style="color: #00ADB5"
+                                        href="#"
+                                        class="condition"
+                                    >Leer Términos y Condiciones</a>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-success btn-block text-white">Actualizar Servidor</button>
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_next" value="https://mcbeservers.ml/actualizado">
+                                </div>
+                            </form>
+                        </center>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-xs-12 col-lg-6 espacio-izquierdo espacio-ejey">
+                    <center>
+                        <h4>¿Quieres actualizar un servidor que publicaste con anterioridad?</h4>
+                        <i>Aqui te enseño a como actualizar los datos.</i>
+                    </center>
+                    <br>
+                    <br>
+                    <br>
+                    <li>
+                        <b>Nombre del servidor:</b> En este apartador puedes ocupar el mismo nombre  del servidor o cambiarlo. (max.100)
+                    </li>
+                    <br>
+                    <li>
+                        <b>Descripción:</b> Aqui puedes actualizar la descripción de tu servidor. (max.500)
+                    </li>
+                    <br>
+                    <li>
+                        <b>Link de descarga:</b> Aqui va el link de descarga del servidor a actualizar, para que un tester descargue y compruebe que tu servidor sea funcional. (max.150)
+                    </li>
+                    <br>
+                    <li>
+                        <b>Correo Electronico:</b> Si ya no cuentas con el correo electronico con el que enviaste el servidor que quieres actualizar, puedes ocupar uno diferente, ya que para comprobar que es tu servidor, se debe usar el "ID de Usuario" y "ID de Server" que se te envio cuando fue publicado.
+                    </li>
+                    <br>
+                    <li>
+                        <b>ID de Usuario:</b> Aqui se debe poner el ID de Usuario que se te proporcionó en tu correo electronico cuando enviaste por primera vez el servidor que estas por actualizar. (Este dato es privado)
+                    </li>
+                    <br>
+                    <li>
+                        <b>ID de Server:</b> Aqui se debe poner el ID de Server que se te proporcionó en tu correo electronico cuando enviaste por primera vez el servidor que estas por actualizar. (Este dato es privado)
+                    </li>
+                    <br>
+                    <li>
+                        <b>-- Selecciona el Software --:</b> Aqui se debe seleccionar el tipo de software y versión que ocupa el servidor que estas actualizando.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Aceptó los Terminos:</b> Este apartado se debe leer, comprender y aceptar.
+                    </li>
+                    <br>
+                    <center>
+                        <h5>
+                            <b>Y para finalizar, debes presionar el botón "Actualizar Servidor".</b>
+                        </h5>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

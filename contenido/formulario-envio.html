@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Envio</title>
+</head>
+<body>
+    <div class="card-body">
+        <div class="profiletimeline border-start-0">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6 espacio-izquierdo espacio-ejey">
+                    <div class="form">
+                        <center>
+                            <form
+                                onsubmit="return tests()"
+                                method="POST"
+                                action="https://formsubmit.co/mcbeservers.forms@gmail.com"
+                                class="form-horizontal form-material mx-2"
+                                enctype="multipart/form-data"
+                            >
+                                <div class="form-group">
+                                    <img src="https://junsp13.github.io/Mis-Assets/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
+                                    <br>
+                                    <input
+                                        placeholder="Nombre del servidor"
+                                        type="text"
+                                        name="Nombre del server"
+                                        class="center value"
+                                        id="server-name"
+                                        maxlength="100"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <textarea
+                                        placeholder="Descripción"
+                                        type="text"
+                                        name="Descripción"
+                                        class="center value"
+                                        id="server-description"
+                                        maxlength="500"
+                                        rows="4"
+                                        required
+                                    ></textarea>
+                                    <br>
+                                    <br>
+                                    <input
+                                        placeholder="Link de descarga"
+                                        type="url"
+                                        name="Link de descarga"
+                                        class="center value prueba"
+                                        id="link-download"
+                                        maxlength="150"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <div id="file-div">
+                                        <img id="enviar-1-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-1"
+                                            type="file"
+                                            name="mini1"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="enviar-2-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-2"
+                                            type="file"
+                                            name="mini2"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="enviar-3-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-3"
+                                            type="file"
+                                            name="mini3"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="enviar-4-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-4"
+                                            type="file"
+                                            name="mini4"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <input
+                                        placeholder="Correo Electronico"
+                                        type="email"
+                                        name="Correo"
+                                        class="center value"
+                                        id="email"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <select
+                                        id="version"
+                                        name="Software"
+                                        class="center"
+                                        style="width: 80%;"
+                                        required
+                                    >
+                                        <option
+                                            disabled
+                                            selected
+                                            value
+                                            hidden
+                                        > -- Selecciona el Software --</option>
+                                        <option value="PocketMine-MP API4">PocketMine {{API}}</option>
+                                        <option value="Dedicated Bedrock V19">Dedicated Bedrock {{MCBE}}</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <input
+                                        type="checkbox"
+                                        class="cuadrito center"
+                                        id="condition"
+                                        name="Términos"
+                                        required
+                                    >
+                                    <span style="color: black"> Aceptó los Términos y Condiciones.</span>
+                                    <br><a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#vertical-center-modal"
+                                        style="color: #00ADB5"
+                                        href="#"
+                                        class="condition"
+                                    >Leer Términos y Condiciones</a>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-success btn-block text-white">Enviar Servidor</button>
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_next" value="https://mcbeservers.ml/enviado">
+                                </div>
+                            </form>
+                        </center>
+                    </div>
+					<hr>
+                </div>
+                <div class="col-xs-12 col-lg-6 espacio-izquierdo espacio-ejey">
+                    <center>
+                        <h4>¿Quieres enviar tu servidor para que se suba a la página?</h4>
+                        <i>Aqui te enseño a como subirlo.</i>
+                    </center>
+                    <br>
+                    <br>
+                    <br>
+                    <li>
+                        <b>Nombre del servidor:</b> En este apartado se debe escribir el nombre/titulo del servidor que quieras publicar. (max.100)
+                    </li>
+                    <br>
+                    <li>
+                        <b>Descripción:</b> En este apartado se debe poner cualquier información del servidor configurado, ya sea la lista de modalidades, plugins/addons o cualquier otra cosa. (max.500)
+                    </li>
+                    <br>
+                    <li>
+                        <b>Link de descarga:</b> Aqui va el link de descarga del servidor a publicar, para que un tester descargue y compruebe que u servidor sea funcional. (max.150)
+                    </li>
+                    <br>
+                    <li>
+                        <b>Correo Electronico:</b> Debes escribir un correo electronico que uses, ya que se te enviara un correo con un "ID de Usuario" y "ID de Server" para cuando quieras actualizar los datos de tu servidor que publicaste.
+                    </li>
+                    <br>
+                    <li>
+                        <b>-- Selecciona el Software --:</b> Aqui se debe seleccionar el tipo de software y versión que ocupa el servidor que estas enviando.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Aceptó los Terminos:</b> Este apartado se debe leer, comprender y aceptar.
+                    </li>
+                    <br>
+                    <center>
+                        <h5>
+                            <b>Y para finalizar, debes presionar el botón "Enviar Servidor".</b>
+                        </h5>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
