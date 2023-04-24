@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registro de usuario</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $('#formulario').submit((event) => {
+          event.preventDefault();
+          const usuario = $('#usuario').val();
+          const correo = $('#correo').val();
+          const contraseña = $('#contraseña').val();
+          $.ajax({
+            url: 'http://n13m13.ml:3000/registrar',
+            type: 'POST',
+            data: { usuario, correo, contraseña },
+            success: (response) => {
+              alert(response);
+            },
+            error: (xhr, status, error) => {
+              console.error(xhr);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Registro de usuario</h1>
+    <form id="formulario">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required>
+      <br>
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required>
+      <br>
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" required>
+      <br>
+      <button type="submit">Registrarse</button>
+    </form>
+  </body>
+</html>
