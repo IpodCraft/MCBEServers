@@ -12,7 +12,7 @@
           const correo = $('#correo').val();
           const contraseña = $('#contraseña').val();
           $.ajax({
-            url: 'http://n13m13.ml:3000/registrar',
+            url: 'http://n13m13.ml:3000/registrar.html',
             type: 'POST',
             data: { usuario, correo, contraseña },
             success: (response) => {
