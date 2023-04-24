@@ -10,11 +10,11 @@
           event.preventDefault();
           const usuario = $('#usuario').val();
           const correo = $('#correo').val();
-          const contraseña = $('#contraseña').val();
+          const contrasena = $('#contrasena').val();
           $.ajax({
             url: 'http://n13m13.ml:3000/registrar.html',
             type: 'POST',
-            data: { usuario, correo, contraseña },
+            data: { usuario, correo, contrasena },
             success: (response) => {
               alert(response);
             },
@@ -35,8 +35,8 @@
       <label for="correo">Correo:</label>
       <input type="email" id="correo" name="correo" required>
       <br>
-      <label for="contraseña">Contraseña:</label>
-      <input type="password" id="contraseña" name="contraseña" required>
+      <label for="contrasena">contrasena:</label>
+      <input type="password" id="contrasena" name="contrasena" required>
       <br>
       <button type="submit">Registrarse</button>
     </form>
