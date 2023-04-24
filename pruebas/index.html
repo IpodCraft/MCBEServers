@@ -1,44 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Registro de usuario</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(() => {
-        $('#formulario').submit((event) => {
-          event.preventDefault();
-          const usuario = $('#usuario').val();
-          const correo = $('#correo').val();
-          const contrasena = $('#contrasena').val();
-          $.ajax({
-            url: 'http://n13m13.ml:3000/registrar.html',
-            type: 'POST',
-            data: { usuario, correo, contrasena },
-            success: (response) => {
-              alert(response);
-            },
-            error: (xhr, status, error) => {
-              console.error(xhr);
-            }
-          });
-        });
-      });
-    </script>
-  </head>
-  <body>
-    <h1>Registro de usuario</h1>
-    <form id="formulario">
-      <label for="usuario">Usuario:</label>
-      <input type="text" id="usuario" name="usuario" required>
-      <br>
-      <label for="correo">Correo:</label>
-      <input type="email" id="correo" name="correo" required>
-      <br>
-      <label for="contrasena">contrasena:</label>
-      <input type="password" id="contrasena" name="contrasena" required>
-      <br>
-      <button type="submit">Registrarse</button>
-    </form>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Formulario de registro y login</title>
+</head>
+<body>
+  <h1>Registro de usuarios</h1>
+  <form action="http://n13m13.ml:3000/registro" method="post">
+    <label for="usuario">Nombre de usuario:</label>
+    <input type="text" id="usuario" name="usuario" required><br><br>
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required><br><br>
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required><br><br>
+    <input type="submit" value="Registrarse">
+  </form>
+
+  <h1>Login de usuarios</h1>
+  <form action="http://n13m13.ml:3000/login" method="post">
+    <label for="usuario">Nombre de usuario:</label>
+    <input type="text" id="usuario" name="usuario" required><br><br>
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required><br><br>
+    <input type="submit" value="Iniciar sesión">
+  </form>
+</body>
 </html>
