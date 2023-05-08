@@ -156,7 +156,25 @@ function getTypeServer() {
     `#server > .card-body > .profiletimeline`
   );
 }
-function getServer({ name, description, images, version, length, date, lastupdate, download, pid }) {
+function getServer({ name, description, images, version, length, date, lastupdate, download, pid } = {}) {
+  if(!pid){
+    getTypeServer().innerHTML += `<div class="sl-item">
+  <div class="sl-right">
+    <div>
+      <h3 class="link">No se encontro el Servidor</h3>
+      <div class="row">
+        <div class="col-md-12 col-xs-12 espacio-izquierdo">
+          <p>El servidor que usted busca no existe o fue removido de la pagina</p>
+        </div>
+      </div>
+      <blockquote class="mt-2">
+        <a href="/" class="btn btn-success text-white">Ir a inicio</a>
+      </blockquote>
+    </div>
+  </div>
+</div>`
+    return;
+  }
   images = [images[0], images[1], images[2], images[3]];
   getTypeServer().innerHTML += `
 <div class="sl-item">
