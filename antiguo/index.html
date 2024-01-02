@@ -90,10 +90,79 @@
                     <div class="row">
                         <div class="col-lg-12 col-xlg-12">
                             <div class="card">
+                                <!-- Tabs -->
+                                <ul class="nav nav-tabs profile-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#pocketmine" role="tab">
+                                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/PM.png" width="30px"> PocketMine
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#dedicated_bedrock" role="tab">
+                                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/DBS.png" width="30px"> Dedicated Bedrock
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#formulario-envio" role="tab">
+                                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/FES.png" width="30px"> Enviar Servidor
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#formulario-actualizacion" role="tab">
+                                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/FAS.png" width="30px"> Actualizar Servidor
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#equipo" role="tab">
+                                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/SD.png" width="30px"> Equipo
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#markdown" role="tab">
+                                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/MD.png" width="30px"> Markdown
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#privacidad" role="tab">
+                                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/PDP.png" width="30px"> Privacidad
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- //Tabs -->
                                 <div class="tab-content">
-                                    <!-- CONTENIDO -->
-                                    <div class="tab-pane active" id="server" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"></div></div></div>
-                                    <!-- //CONTENIDO -->
+
+                                    <!-- INICIO -->
+                                    <div class="tab-pane active" id="inicio" role="tabpanel"></div>
+                                    <!-- //INICIO -->
+                                    
+                                    <!-- POCKETMINE-MP -->
+                                    <div class="tab-pane" id="pocketmine" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"></div></div></div>
+                                    <!-- //POCKETMINE-MP -->
+
+                                    <!-- DEDICATED BEDROCK SERVER -->
+                                    <div class="tab-pane" id="dedicated_bedrock" role="tabpanel"><div class="card-body"><div class="profiletimeline border-start-0"></div></div></div>
+                                    <!-- //DEDICATED BEDROCK SERVER -->
+
+                                    <!-- ENVIAR SERVER -->
+                                    <div class="tab-pane" id="formulario-envio" role="tabpanel"></div>
+                                    <!-- //ENVIAR SERVER -->
+
+                                    <!-- ACTUALIZAR SERVER -->
+                                    <div class="tab-pane" id="formulario-actualizacion" role="tabpanel"></div>
+                                    <!-- //ACTUALIZAR SERVER -->
+
+                                    <!-- EQUIPO -->
+                                    <div class="tab-pane" id="equipo" role="tabpanel"></div>
+                                    <!-- //EQUIPO -->
+
+                                    <!-- MARKDOWN -->
+                                    <div class="tab-pane" id="markdown" role="tabpanel"></div>
+                                    <!-- //MARKDOWN -->
+
+                                    <!-- PRIVACIDAD -->
+                                    <div class="tab-pane" id="privacidad" role="tabpan"></div>
+                                    <!-- //PRIVACIDAD -->
+
                                 </div>
                             </div>
                         </div>
@@ -117,7 +186,10 @@
 
             </div>
         </div>
-		<script src="../api/data.js"></script>
+		<script src="https://mis-assets.pages.dev/Apis/mcbe_servers/img-script.js"></script>
+		<script src="https://mis-assets.pages.dev/Apis/mcbe_servers/data.js"></script>
+        <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/api.js"></script>
+        <script src="https://mis-assets.pages.dev/MCBE_Servers/js/indexes.js"></script>
 		
         <script src="https://mis-assets.pages.dev/MCBE_Servers/js/jquery-1.3.2.min.js"></script>
         <script src="https://mis-assets.pages.dev/MCBE_Servers/js/imgzoom.js"></script>
@@ -134,98 +206,6 @@
         <script src="https://mis-assets.pages.dev/MCBE_Servers/plugins/c3-master/c3.min.js"></script>
         <script src="https://mis-assets.pages.dev/MCBE_Servers/js/pages/dashboards/dashboard1.js"></script>
         <script src="https://mis-assets.pages.dev/MCBE_Servers/js/custom.js"></script>
-        
-        <script>
-            //Copiar Link
-fetch("/contenido/importante/copiar-link.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("vertical-center-modal2").innerHTML = data;
-});
-            function getlink(pid) {
-var aux = document.createElement("input");
-aux.setAttribute("value",`https://mcbeservers.ml/server?${pid}`);
-document.body.appendChild(aux);
-aux.select();
-document.execCommand("copy");
-document.body.removeChild(aux);
-}
-
-function getTypeServer() {
-  return document.querySelector(
-    `#server > .card-body > .profiletimeline`
-  );
-}
-function getServer({ name, description, images, version, length, date, lastupdate, download, pid } = {}) {
-  if(!pid){
-    getTypeServer().innerHTML += `<div class="sl-item">
-  <div class="sl-right">
-    <div>
-      <h3 class="link">No se encontro el Servidor</h3>
-      <div class="row">
-        <div class="col-md-12 col-xs-12 espacio-izquierdo">
-          <p>El servidor que usted busca no existe o fue removido de la pagina</p>
-        </div>
-      </div>
-      <blockquote class="mt-2">
-        <a href="/" class="btn btn-success text-white"><i class="fa fa-home"></i> Ir a inicio</a>
-      </blockquote>
-    </div>
-  </div>
-</div>`
-    return;
-  }
-  images = [images[0], images[1], images[2], images[3]];
-  getTypeServer().innerHTML += `
-<div class="sl-item">
-  <div class="sl-right">
-    <div>
-      <h3 class="link">${name}</h3>
-	  
-      <div class="row">
-        ${images
-          .map(
-            img => `<div class="col-lg-3 col-md-6 mb-3 espacio-img">
-          <img src="${
-            img ||
-            'https://media.airedesantafe.com.ar/p/8639febeae789decce31551e14f3b300/adjuntos/268/imagenes/003/416/0003416558/412x232/smart/minecraftpng.png'
-          }" alt="user" class="img-responsive radius w-100 zoomable">
-        </div>`
-          )
-          .join('')}
-        <div class="col-md-12 col-xs-12 espacio-izquierdo">
-          <p>${description}</p>
-        </div>
-      </div>
-      <blockquote class="mt-2">
-        <p>${version[0]} Versión: ${version[1]} -> ${versions[version[0]][version[1]]}</p>
-        <p>Tamaño del Archivo: ${length}</p>
-        <p>Fecha de Subida: ${date}</p>
-		<p>Ultima Actualización: ${lastupdate}</p>
-        <a href="${download}" class="btn btn-success text-white"><i class="fa fa-download"></i> Descargar</a>
-		<a data-bs-toggle="modal" data-bs-target="#vertical-center-modal2" style="color: #00ADB5" onclick="getlink('${pid}')" class="btn btn-success text-white condition"><i class="fas fa-link"></i></a>
-      </blockquote>
-    </div>
-  </div>
-</div>`;
-}
-let interval;
-let Api = () => {
-    const pid = location.search.split('?')[1];
-    const server = servers.find(server => server.pid === pid);
-    getServer(server);
-  Api = () => {
-    clearInterval(interval);
-    interval = null;
-  };
-};
-function fn() {
-  return Api();
-}
-
-interval = setInterval(fn, 100);
-
-        </script>
         <script>
         $('.without-caption').magnificPopup({ type: 'image', closeOnContentClick: true, closeBtnInside: false, mainClass: 'mfp-no-margins mfp-with-zoom', image: { verticalFit: true }, zoom: { enabled: true, duration: 300 }});
         $('.with-caption').magnificPopup({
