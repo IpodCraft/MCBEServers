@@ -127,11 +127,11 @@ getTypeServer().innerHTML += `<div class="col-12 col-lg-12 col-sm-12 com-md-12 m
       <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
         <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
           <div class="card-title">
-            <h4 class="text-nowrap mb-2">${name}</h4>
+            <h3 class="text-nowrap mb-2">${name}</h3>
 
 
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-6">
+                <div class="col-md-12 col-sm-12 col-lg-6 mt-2 mb-3">
                   <div
                     id="carouselExampleDark"
                     class="carousel carousel-light slide carousel-fade"
@@ -184,17 +184,26 @@ getTypeServer().innerHTML += `<div class="col-12 col-lg-12 col-sm-12 com-md-12 m
                     </a>
                   </div>
                 </div>
-              <div class="col-md-12 col-sm-12 col-lg-6 mt-3 mb-3">
-                  <p><b>${version[0]} Versión:</b> ${version[1]} -> ${versions[version[0]][version[1]]}</p>
-                  <p>Tamaño del Archivo: ${length}</p>
-                  <p>Fecha de Subida: ${date}</p>
-		              <p>Ultima Actualización: ${lastupdate}</p>
-                  <a href="${download}" class="btn-espacio btn btn-primary text-white"><i class="fa fa-download"></i> Descargar ${name}</a>
-                  <a href="${downloadOficial}" class="btn-espacio btn btn-primary text-white"><i class="fa fa-download"></i> Descargar ${name}</a>
+
+              <div class="col-md-12 col-sm-12 col-lg-6">
+                <blockquote>
+                  <div class="bq-titulo"><span class="bq-txt">INFORMACIÓN:</span></div>
+                  <div class="bq-datos">
+                    <p><b>${version[0]} versión:</b> <span class="espacio-badge badge bg-label-success rounded-pill">${version[1]} -> ${versions[version[0]][version[1]]}</span></p>
+                    <p><b>Tamaño del archivo:</b> <span class="espacio-badge badge bg-label-info rounded-pill">${length}</span></p>
+                    <p><b>Fecha de subida:</b> <span class="espacio-badge badge bg-label-danger rounded-pill">${date}</span></p>
+		                <p><b>Ultima actualización:</b> <span class="espacio-badge badge bg-label-warning rounded-pill">${lastupdate}</span></p>
+                    <a href="${download}" class="btn-espacio btn btn-primary text-white"><i class="fa fa-download"></i> Descargar ${name}</a>
+                    <a href="${downloadOficial}" class="btn-espacio btn btn-primary text-white"><i class="fa fa-download"></i> Descargar ${name}</a>
+                  </div>
+                </blockquote>
               </div>
               <div class="col-md-12 col-sm-12 col-lg-12">
-                <blockquote class="mt-2">
-                  <p>${description}</p>
+                <blockquote>
+                  <div class="bq-titulo"><span class="bq-txt">DESCRIPCIÓN:</span></div>
+                  <div class="bq-datos">
+                    <p>${description}</p>
+                  </div>
                 </blockquote>
               </div>
           </div>
