@@ -20,6 +20,7 @@ data-template="vertical-menu-template-free">
     <link rel="stylesheet" href="https://mis-assets.pages.dev/copyright.css">
     <script src="https://mis-assets.pages.dev/MCBE_Servers/js/config.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/js/helpers.js"></script>
+    <link rel="stylesheet" href="https://mis-assets.pages.dev/MCBE_Servers/vendor/css/formulario.css">
   </head>
 
   <body>
@@ -46,7 +47,7 @@ data-template="vertical-menu-template-free">
         
           <ul class="menu-inner py-1">
             <!-- Dashboards -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home"></i>
                 <div data-i18n="Inicio">Inicio</div>
@@ -54,17 +55,10 @@ data-template="vertical-menu-template-free">
             </li>
         
             <!-- Front Pages -->
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="/formularios" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-window-open"></i>
                 <div data-i18n="Formulario">Formularios</div>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="/" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-plug"></i>
-                <div data-i18n="plugins">Plugins</div>
               </a>
             </li>
         
@@ -123,30 +117,28 @@ data-template="vertical-menu-template-free">
                       <div class="nav-align-top mb-4">
                         <ul class="nav nav-tabs nav-fill" role="tablist">
                           <li class="nav-item">
-                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-inicio" aria-controls="navs-justified-inicio" aria-selected="true">
-                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/INICIO.png"><span class="d-none d-sm-block"> Inicio</span>
+                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-formEnvio" aria-controls="navs-justified-formEnvio" aria-selected="TRUE">
+                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/FES.png"><span class="d-none d-sm-block"> Formulario de Envio</span>
                             </button>
                           </li>
                           <li class="nav-item">
-                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-pocketmine" aria-controls="navs-justified-pocketmine" aria-selected="false">
-                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/PM.png"><span class="d-none d-sm-block"> PocketMine-MP</span>
-                            </button>
-                          </li>
-                          <li class="nav-item">
-                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-bds" aria-controls="navs-justified-bds" aria-selected="false">
-                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/DBS.png"><span class="d-none d-sm-block"> BDS</span>
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-formActualizacion" aria-controls="navs-justified-formActualizacion" aria-selected="false">
+                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/FAS.png"><span class="d-none d-sm-block"> Formulario de Actualización</span>
                             </button>
                           </li>
                         </ul>
                         <div class="tab-content">
-                          <div class="tab-pane fade show active" id="navs-justified-inicio" role="tabpanel">
-                            <div class="row" id="inicio"></div>
+                          <div class="tab-pane fade show active" id="navs-justified-formEnvio" role="tabpanel">
+                            
+                          
+                          <form onsubmit="return tests()" method="POST" action="https://formsubmit.co/mcbeservers.forms@gmail.com" class="form-horizontal form-material mx-2" enctype="multipart/form-data">
+                            <input placeholder="Nombre del servidor" type="text" name="Nombre del server" class="center value" id="server-name" maxlength="50" required>
+                            <textarea placeholder="Descripción" type="text" name="Descripción" class="center value" id="server-description" maxlength="500" rows="4" required></textarea>
+                          </form>
+                            
                           </div>
-                          <div class="tab-pane fade" id="navs-justified-pocketmine" role="tabpanel">
-                            <div class="row" id="pocketmine"></div>
-                          </div>
-                          <div class="tab-pane fade" id="navs-justified-bds" role="tabpanel">
-                            <div class="row" id="bds"></div>
+                          <div class="tab-pane fade" id="navs-justified-formActualizacion" role="tabpanel">
+                            <div class="row" id="formularioActualizacion"></div>
                           </div>
                         </div>
                       </div>
@@ -177,6 +169,7 @@ data-template="vertical-menu-template-free">
     <!-- JS -->
     <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/api.js"></script>
     <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/data.js"></script>
+    <script src="https://mis-assets.pages.dev/MCBE_Servers/js/img-script.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/jquery/jquery.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/popper/popper.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/js/bootstrap.js"></script>
