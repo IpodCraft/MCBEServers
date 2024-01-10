@@ -264,7 +264,7 @@ data-template="vertical-menu-template-free">
                                           <br>
                                           <br>
                                           <button class="btn btn-primary btn-block text-white">Enviar Servidor</button>
-                                          <input type="hidden" name="_captcha" value="false">
+                                          <input type="hidden" name="_captcha" value="true">
                                           <input type="hidden" name="_next" value="https://mcbeservers.pages.dev/enviado">
                                       </div>
                                   </form>
@@ -280,7 +280,8 @@ data-template="vertical-menu-template-free">
 
                                   <div class="form">
                                       <center>
-                                          <form 
+                                          <form
+                                              onsubmit="return tests()"
                                               method="POST"
                                               action="https://formsubmit.co/mcbeservers.actualizaciones@gmail.com"
                                               class="form-horizontal form-material mx-2"
@@ -416,7 +417,7 @@ data-template="vertical-menu-template-free">
                                                   <br>
                                                   <br>
                                                   <button class="btn btn-primary btn-block text-white">Actualizar Servidor</button>
-                                                  <input type="hidden" name="_captcha" value="false">
+                                                  <input type="hidden" name="_captcha" value="true">
                                                   <input type="hidden" name="_next" value="https://mcbeservers.pages.dev/actualizado">
                                               </div>
                                           </form>
