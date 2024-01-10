@@ -21,6 +21,7 @@ data-template="vertical-menu-template-free">
     <script src="https://mis-assets.pages.dev/MCBE_Servers/js/config.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/js/helpers.js"></script>
     <link rel="stylesheet" href="https://mis-assets.pages.dev/MCBE_Servers/vendor/css/formulario.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
 
   <body>
@@ -135,6 +136,7 @@ data-template="vertical-menu-template-free">
                             <div class="form">
                               <center>
                                   <form
+                                      onsubmit="return tests()"
                                       method="POST"
                                       action="https://formsubmit.co/mcbeservers.forms@gmail.com"
                                       class="form-horizontal form-material mx-2"
@@ -262,7 +264,9 @@ data-template="vertical-menu-template-free">
                                           >Leer Términos y Condiciones</a>
                                           <br>
                                           <br>
-                                          <button type="submit" class="btn btn-primary btn-block text-white">Enviar Servidor</button>
+                                          <button class="btn btn-primary btn-block text-white">Enviar Servidor</button>
+                                          <input type="hidden" name="_captcha" value="false">
+                                          <input type="hidden" name="_next" value="https://mcbeservers.pages.dev/formularios">
                                       </div>
                                   </form>
                               </center>
@@ -278,6 +282,7 @@ data-template="vertical-menu-template-free">
                                   <div class="form">
                                       <center>
                                           <form
+                                              onsubmit="return tests()"
                                               method="POST"
                                               action="https://formsubmit.co/mcbeservers.actualizaciones@gmail.com"
                                               class="form-horizontal form-material mx-2"
@@ -412,7 +417,9 @@ data-template="vertical-menu-template-free">
                                                   >Leer Términos y Condiciones</a>
                                                   <br>
                                                   <br>
-                                                  <button type="submit" class="btn btn-primary btn-block text-white">Actualizar Servidor</button>
+                                                  <button class="btn btn-primary btn-block text-white">Actualizar Servidor</button>
+                                                  <input type="hidden" name="_captcha" value="false">
+                                                  <input type="hidden" name="_next" value="https://mcbeservers.pages.dev/formularios">
                                               </div>
                                           </form>
                                       </center>
