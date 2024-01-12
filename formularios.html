@@ -131,299 +131,174 @@ data-template="vertical-menu-template-free">
                         <div class="tab-content">
                           <div class="tab-pane fade show active" id="navs-justified-formEnvio" role="tabpanel">
 
+
                             <div class="row">
                               <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
-                            <div class="form">
-                              <center>
-                                  <form
-                                      onsubmit="return tests()"
-                                      method="POST"
-                                      action="https://formsubmit.co/mcbeservers.forms@gmail.com"
-                                      class="form-horizontal form-material mx-2"
-                                      enctype="multipart/form-data"
-                                  >
-                                      <div class="form-group">
-                                          <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
-                                          <br>
-                                          <input
-                                              placeholder="Nombre del servidor"
-                                              type="text"
-                                              name="Nombre del server"
-                                              class="center value"
-                                              id="server-name"
-                                              maxlength="100"
-                                              required
-                                          >
-                                          <br>
-                                          <br>
-                                          <textarea
-                                              placeholder="Descripción"
-                                              type="text"
-                                              name="Descripción"
-                                              class="center value"
-                                              id="server-description"
-                                              maxlength="500"
-                                              rows="4"
-                                              required
-                                          ></textarea>
-                                          <br>
-                                          <br>
-                                          <input
-                                              placeholder="Link de descarga"
-                                              type="url"
-                                              name="Link de descarga"
-                                              class="center value prueba"
-                                              id="link-download"
-                                              maxlength="150"
-                                              required
-                                          >
-                                          <br>
-                                          <br>
-                                          <div id="file-div">
-                                              <img id="enviar-1-img" src="" style="opacity:0">
-                                              <input
-                                                  id="enviar-1"
-                                                  type="file"
-                                                  name="mini1"
-                                                  accept=".png,.jpeg,.jpg"
-                                              >
-                                          </div>
-                                          <div id="file-div">
-                                              <img id="enviar-2-img" src="" style="opacity:0">
-                                              <input
-                                                  id="enviar-2"
-                                                  type="file"
-                                                  name="mini2"
-                                                  accept=".png,.jpeg,.jpg"
-                                              >
-                                          </div>
-                                          <div id="file-div">
-                                              <img id="enviar-3-img" src="" style="opacity:0">
-                                              <input
-                                                  id="enviar-3"
-                                                  type="file"
-                                                  name="mini3"
-                                                  accept=".png,.jpeg,.jpg"
-                                              >
-                                          </div>
-                                          <div id="file-div">
-                                              <img id="enviar-4-img" src="" style="opacity:0">
-                                              <input
-                                                  id="enviar-4"
-                                                  type="file"
-                                                  name="mini4"
-                                                  accept=".png,.jpeg,.jpg"
-                                              >
-                                          </div>
-                                          <br>
-                                          <br>
-                                          <input
-                                              placeholder="Correo Electronico"
-                                              type="email"
-                                              name="Correo"
-                                              class="center value"
-                                              id="email"
-                                              required
-                                          >
-                                          <br>
-                                          <br>
-                                          <select
-                                              id="version"
-                                              name="Software"
-                                              class="center"
-                                              style="width: 80%;"
-                                              required
-                                          >
-                                              <option
-                                                  disabled
-                                                  selected
-                                                  value
-                                                  hidden
-                                              > -- Selecciona el Software --</option>
-                          <option value="PocketMine-MP API5">PocketMine {{API}}</option>
-                          <option value="PocketMine-MP API4">PocketMine {{API4}}</option>
-                          <option value="Dedicated Bedrock V20">Dedicated Bedrock {{MCBE}}</option>
-                                              <option value="Dedicated Bedrock V19">Dedicated Bedrock {{MCBE19}}</option>
-                                          </select>
-                                          <br>
-                                          <br>
-                                          <input
-                                              type="checkbox"
-                                              class="cuadrito center"
-                                              id="condition"
-                                              name="Términos"
-                                              required
-                                          >
-                                          <span style="color: black"> Aceptó los Términos y Condiciones.</span>
-                                          <br><a
-                                              data-bs-toggle="modal"
-                                              data-bs-target="#vertical-center-modal"
-                                              style="color: #00ADB5"
-                                              href="#"
-                                              class="condition"
-                                          >Leer Términos y Condiciones</a>
-                                          <br>
-                                          <br>
-                                          <button class="btn btn-primary btn-block text-white">Enviar Servidor</button>
-                                          <input type="hidden" name="_captcha" value="false">
-                                          <input type="hidden" name="_next" value="https://mcbeservers.pages.dev/formularios">
+                              <div class="form">
+                                <center>
+                                  <form class="form-horizontal form-material mx-2" action="https://pjs13.000webhostapp.com/mcbeserver-envio.php" method="POST" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                      <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
+                                      <input maxlength="50" required placeholder="Nombre del servidor" class="center value" type="text" name="nombre">
+                                      <br><br>
+                                      <textarea maxlength="500" required placeholder="Descripción" class="center value" rows="4" type="text" name="descripcion"></textarea>
+                                      <br><br>
+                                      <input maxlength="200" required placeholder="Link de descarga" class="center value" type="text" name="link">
+                                      <br><br>
+                                      <div id="file-div">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                        <img id="enviar-1-img" src="" style="opacity:0">
+                                        <input id="enviar-1" type="file" name="mini1" accept=".png, .jpeg, .jpg">
                                       </div>
+                                      <div id="file-div">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                        <img id="enviar-2-img" src="" style="opacity:0">
+                                        <input id="enviar-2" type="file" name="mini2" accept=".png, .jpeg, .jpg">
+                                      </div>
+                                      <div id="file-div">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                        <img id="enviar-3-img" src="" style="opacity:0">
+                                        <input id="enviar-3" type="file" name="mini3" accept=".png, .jpeg, .jpg">
+                                      </div>
+                                      <div id="file-div">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                        <img id="enviar-4-img" src="" style="opacity:0">
+                                        <input id="enviar-4" type="file" name="mini4" accept=".png, .jpeg, .jpg">
+                                      </div>
+                                      <br>
+                                      <br>
+                                      <input maxlength="100" required placeholder="Correo Electronico" class="center value" type="email" name="correo">
+                                      <br>
+                                      <br>
+                                      <select style="width: 80%;" required class="center" name="software">
+                                        <option disabled selected value hidden>-- Selecciona el Software --</option>
+                                        <option value="PocketMine-MP API5">PocketMine {{API}}</option>
+                                        <option value="PocketMine-MP API4">PocketMine {{API4}}</option>
+                                        <option value="Dedicated Bedrock V20">Dedicated Bedrock {{MCBE}}</option>
+                                        <option value="Dedicated Bedrock V19">Dedicated Bedrock {{MCBE19}}</option>
+                                      </select>
+                                      <br>
+                                      <br>
+                                      <input required class="cuadrito center" type="checkbox" type="checkbox" name="terminos">
+                                      <span style="color: black"> Aceptó los Términos y Condiciones.</span>
+                                      <br>
+                                      <a data-bs-toggle="modal" data-bs-target="#vertical-center-modal" style="color: #00ADB5" href="#"class="condition">Leer Términos y Condiciones</a>
+                                      <br>
+                                      <br>
+                                      <button class="btn btn-primary btn-block text-white" type="submit" value="Guardar">Enviar Servidor</button>
+                                    </div>
                                   </form>
+                                </center>
+                              </div>
+                              <hr>
+                            </div>
+                            <div class="col-xs-12 col-lg-6 espacio-izquierdo espacio-ejey">
+                              <center>
+                                  <h4>¿Quieres enviar tu servidor para que se suba a la página?</h4>
+                                  <i>Aqui te enseño a como subirlo.</i>
+                              </center>
+                              <br>
+                              <br>
+                              <br>
+                              <li>
+                                  <b>Nombre del servidor:</b> En este apartado se debe escribir el nombre/titulo del servidor que quieras publicar. (max.50)
+                              </li>
+                              <br>
+                              <li>
+                                  <b>Descripción:</b> En este apartado se debe poner cualquier información del servidor configurado, ya sea la lista de modalidades, plugins/addons o cualquier otra cosa. (max.500)
+                              </li>
+                              <br>
+                              <li>
+                                  <b>Link de descarga:</b> Aqui va el link de descarga del servidor a publicar, para que un tester descargue y compruebe que tu servidor sea funcional. (max.200)
+                              </li>
+                              <br>
+                              <li>
+                                  <b>Correo Electronico:</b> Debes escribir un correo electronico que uses, ya que se te enviara un correo con un "ID de Usuario" y "ID de Server" para cuando quieras actualizar los datos de tu servidor que publicaste. (max.100)
+                              </li>
+                              <br>
+                              <li>
+                                  <b>-- Selecciona el Software --:</b> Aqui se debe seleccionar el tipo de software y versión que ocupa el servidor que estas enviando.
+                              </li>
+                              <br>
+                              <li>
+                                  <b>Aceptó los Terminos:</b> Este apartado se debe leer, comprender y aceptar.
+                              </li>
+                              <br>
+                              <center>
+                                  <h5>
+                                      <b>Y para finalizar, debes presionar el botón "Enviar Servidor".</b>
+                                  </h5>
                               </center>
                           </div>
-                        </div></div>
-                            
+
                           </div>
+                        </div>
+
                           <div class="tab-pane fade" id="navs-justified-formActualizacion" role="tabpanel">
                             
                             <div class="row">
                               <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
 
-                                  <div class="form">
-                                      <center>
-                                          <form
-                                              onsubmit="return tests()"
-                                              method="POST"
-                                              action="https://formsubmit.co/mcbeservers.actualizaciones@gmail.com"
-                                              class="form-horizontal form-material mx-2"
-                                              enctype="multipart/form-data"
-                                          >
-                                              <div class="form-group">
-                                                  <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
-                                                  <br>
-                                                  <input
-                                                      placeholder="Nombre del servidor"
-                                                      type="text"
-                                                      name="Nombre del server"
-                                                      class="center value"
-                                                      id="server-name"
-                                                      maxlength="100"
-                                                      required
-                                                  >
-                                                  <br>
-                                                  <br>
-                                                  <textarea
-                                                      placeholder="Descripción"
-                                                      type="text"
-                                                      name="Descripción"
-                                                      class="center value"
-                                                      id="server-description"
-                                                      maxlength="500"
-                                                      rows="4"
-                                                      required
-                                                  ></textarea>
-                                                  <br>
-                                                  <br>
-                                                  <input
-                                                      placeholder="Link de descarga"
-                                                      type="url"
-                                                      name="Link de descarga"
-                                                      class="center value prueba"
-                                                      id="link-download"
-                                                      maxlength="150"
-                                                      required
-                                                  >
-                                                  <br>
-                                                  <br>
-                                                  <div id="file-div">
-                                                      <img id="actualizar-1-img" src="" style="opacity:0">
-                                                      <input
-                                                          id="actualizar-1"
-                                                          type="file"
-                                                          name="mini1"
-                                                          accept=".png,.jpeg,.jpg"
-                                                      >
-                                                  </div>
-                                                  <div id="file-div">
-                                                      <img id="actualizar-2-img" src="" style="opacity:0">
-                                                      <input
-                                                          id="actualizar-2"
-                                                          type="file"
-                                                          name="mini2"
-                                                          accept=".png,.jpeg,.jpg"
-                                                      >
-                                                  </div>
-                                                  <div id="file-div">
-                                                      <img id="actualizar-3-img" src="" style="opacity:0">
-                                                      <input
-                                                          id="actualizar-3"
-                                                          type="file"
-                                                          name="mini3"
-                                                          accept=".png,.jpeg,.jpg"
-                                                      >
-                                                  </div>
-                                                  <div id="file-div">
-                                                      <img id="actualizar-4-img" src="" style="opacity:0">
-                                                      <input
-                                                          id="actualizar-4"
-                                                          type="file"
-                                                          name="mini4"
-                                                          accept=".png,.jpeg,.jpg"
-                                                      >
-                                                  </div>
-                                                  <br>
-                                                  <br>
-                                                  <input
-                                                      placeholder="Correo Electronico"
-                                                      type="email"
-                                                      name="Correo"
-                                                      class="center value"
-                                                      id="email"
-                                                      required
-                                                  >
-                                                  <br>
-                                                  <br>
-                                                  <input
-                                                      placeholder="ID de Usuario"
-                                                      type="text"
-                                                      name="ID de Usuario"
-                                                      class="form-izquierda value2"
-                                                      id="id-usuario"
-                                                      maxlength="9"
-                                                      required
-                                                  >
-                                                  <input placeholder="ID de Server" type="text" name="Server ID" class="form-derecha value2" id="id-server" maxlength="6" required>
-                                                  <br>
-                                                  <br>
-                                                  <br>
-                                                  <select id="version" name="Software" class="center" style="width: 80%;" required>
-                                                      <option
-                                                          disabled
-                                                          selected
-                                                          value
-                                                          hidden
-                                                      > -- Selecciona el Software --</option>
-                                                      <option value="PocketMine-MP API5">PocketMine 5</option>
-                                                      <option value="PocketMine-MP API4">PocketMine 4</option>
-                                                      <option value="Dedicated Bedrock V20">Dedicated Bedrock 20</option>
-                                                      <option value="Dedicated Bedrock V19">Dedicated Bedrock 19</option>
-                                                  </select>
-                                                  <br>
-                                                  <br>
-                                                  <input
-                                                      type="checkbox"
-                                                      class="cuadrito center"
-                                                      id="condition"
-                                                      name="Términos"
-                                                      required
-                                                  >
-                                                  <span style="color: black"> Aceptó los Términos y Condiciones.</span>
-                                                  <br><a
-                                                      data-bs-toggle="modal"
-                                                      data-bs-target="#vertical-center-modal"
-                                                      style="color: #00ADB5"
-                                                      href="#"
-                                                      class="condition"
-                                                  >Leer Términos y Condiciones</a>
-                                                  <br>
-                                                  <br>
-                                                  <button class="btn btn-primary btn-block text-white">Actualizar Servidor</button>
-                                                  <input type="hidden" name="_captcha" value="false">
-                                                  <input type="hidden" name="_next" value="https://mcbeservers.pages.dev/formularios">
-                                              </div>
-                                          </form>
-                                      </center>
-                                  </div>
+                                <div class="form">
+                                  <center>
+                                    <form class="form-horizontal form-material mx-2" action="https://pjs13.000webhostapp.com/mcbeserver-actualizar.php" method="POST" enctype="multipart/form-data">
+                                      <div class="form-group">
+                                        <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
+                                        <input maxlength="50" required placeholder="Nombre del servidor" class="center value" type="text" name="nombre">
+                                        <br><br>
+                                        <textarea maxlength="500" required placeholder="Descripción" class="center value" rows="4" type="text" name="descripcion"></textarea>
+                                        <br><br>
+                                        <input maxlength="200" required placeholder="Link de descarga" class="center value" type="text" name="link">
+                                        <br><br>
+                                        <div id="file-div">
+                                          <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                          <img id="enviar-1-img" src="" style="opacity:0">
+                                          <input id="enviar-1" type="file" name="mini1" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <div id="file-div">
+                                          <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                          <img id="enviar-2-img" src="" style="opacity:0">
+                                          <input id="enviar-2" type="file" name="mini2" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <div id="file-div">
+                                          <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                          <img id="enviar-3-img" src="" style="opacity:0">
+                                          <input id="enviar-3" type="file" name="mini3" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <div id="file-div">
+                                          <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                                          <img id="enviar-4-img" src="" style="opacity:0">
+                                          <input id="enviar-4" type="file" name="mini4" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <input maxlength="100" required placeholder="Correo Electronico" class="center value" type="email" name="correo">
+                                        <br>
+                                        <br>
+                                        <input maxlength="9" required placeholder="ID de Usuario" class="form-izquierda value2" type="text"name="id_usuario">
+                                        <input maxlength="6" required placeholder="ID de Server" class="form-derecha value2" type="text" name="id_server">
+                                        <br>
+                                        <br>
+                                        <select style="width: 80%;" required class="center" name="software">
+                                          <option disabled selected value hidden>-- Selecciona el Software --</option>
+                                          <option value="PocketMine-MP API5">PocketMine {{API}}</option>
+                                          <option value="PocketMine-MP API4">PocketMine {{API4}}</option>
+                                          <option value="Dedicated Bedrock V20">Dedicated Bedrock {{MCBE}}</option>
+                                          <option value="Dedicated Bedrock V19">Dedicated Bedrock {{MCBE19}}</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input required class="cuadrito center" type="checkbox" type="checkbox" name="terminos">
+                                        <span style="color: black"> Aceptó los Términos y Condiciones.</span>
+                                        <br>
+                                        <a data-bs-toggle="modal" data-bs-target="#vertical-center-modal" style="color: #00ADB5" href="#"class="condition">Leer Términos y Condiciones</a>
+                                        <br>
+                                        <br>
+                                        <button class="btn btn-primary btn-block text-white" type="submit" value="Guardar">Enviar Servidor</button>
+                                      </div>
+                                    </form>
+                                  </center>
+                                </div>
                                   <hr>
                               </div>
                               <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -435,7 +310,7 @@ data-template="vertical-menu-template-free">
                                   <br>
                                   <br>
                                   <li>
-                                      <b>Nombre del servidor:</b> En este apartador puedes ocupar el mismo nombre  del servidor o cambiarlo. (max.100)
+                                      <b>Nombre del servidor:</b> En este apartador puedes ocupar el mismo nombre  del servidor o cambiarlo. (max.50)
                                   </li>
                                   <br>
                                   <li>
@@ -443,11 +318,11 @@ data-template="vertical-menu-template-free">
                                   </li>
                                   <br>
                                   <li>
-                                      <b>Link de descarga:</b> Aqui va el link de descarga del servidor a actualizar, para que un tester descargue y compruebe que tu servidor sea funcional. (max.150)
+                                      <b>Link de descarga:</b> Aqui va el link de descarga del servidor a actualizar, para que un tester descargue y compruebe que tu servidor sea funcional. (max.200)
                                   </li>
                                   <br>
                                   <li>
-                                      <b>Correo Electronico:</b> Si ya no cuentas con el correo electronico con el que enviaste el servidor que quieres actualizar, puedes ocupar uno diferente, ya que para comprobar que es tu servidor, se debe usar el "ID de Usuario" y "ID de Server" que se te envio cuando fue publicado.
+                                      <b>Correo Electronico:</b> Si ya no cuentas con el correo electronico con el que enviaste el servidor que quieres actualizar, puedes ocupar uno diferente, ya que para comprobar que es tu servidor, se debe usar el "ID de Usuario" y "ID de Server" que se te envio cuando fue publicado. (max.100)
                                   </li>
                                   <br>
                                   <li>
