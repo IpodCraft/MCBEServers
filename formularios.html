@@ -130,108 +130,7 @@ data-template="vertical-menu-template-free">
                         </ul>
                         <div class="tab-content">
                           <div class="tab-pane fade show active" id="navs-justified-formEnvio" role="tabpanel">
-
-
-                            <div class="row">
-                              <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
-                              <div class="form">
-                                <center>
-                                  <form class="form-horizontal form-material mx-2" action="https://pjs13.000webhostapp.com/mcbeserver-envio.php" method="POST" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                      <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
-                                      <input maxlength="50" required placeholder="Nombre del servidor" class="center value" type="text" name="nombre">
-                                      <br><br>
-                                      <textarea maxlength="500" required placeholder="Descripción" class="center value" rows="4" type="text" name="descripcion"></textarea>
-                                      <br><br>
-                                      <input maxlength="200" required placeholder="Link de descarga" class="center value" type="text" name="link">
-                                      <br><br>
-                                      <div id="file-div">
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
-                                        <img id="enviar-1-img" src="" style="opacity:0">
-                                        <input id="enviar-1" type="file" name="mini1" accept=".png, .jpeg, .jpg">
-                                      </div>
-                                      <div id="file-div">
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
-                                        <img id="enviar-2-img" src="" style="opacity:0">
-                                        <input id="enviar-2" type="file" name="mini2" accept=".png, .jpeg, .jpg">
-                                      </div>
-                                      <div id="file-div">
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
-                                        <img id="enviar-3-img" src="" style="opacity:0">
-                                        <input id="enviar-3" type="file" name="mini3" accept=".png, .jpeg, .jpg">
-                                      </div>
-                                      <div id="file-div">
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
-                                        <img id="enviar-4-img" src="" style="opacity:0">
-                                        <input id="enviar-4" type="file" name="mini4" accept=".png, .jpeg, .jpg">
-                                      </div>
-                                      <br>
-                                      <br>
-                                      <input maxlength="100" required placeholder="Correo Electronico" class="center value" type="email" name="correo">
-                                      <br>
-                                      <br>
-                                      <select style="width: 80%;" required class="center" name="software">
-                                        <option disabled selected value hidden>-- Selecciona el Software --</option>
-                                        <option value="PocketMine-MP API5">PocketMine {{API}}</option>
-                                        <option value="PocketMine-MP API4">PocketMine {{API4}}</option>
-                                        <option value="Dedicated Bedrock V20">Dedicated Bedrock {{MCBE}}</option>
-                                        <option value="Dedicated Bedrock V19">Dedicated Bedrock {{MCBE19}}</option>
-                                      </select>
-                                      <br>
-                                      <br>
-                                      <input required class="cuadrito center" type="checkbox" type="checkbox" name="terminos">
-                                      <span style="color: black"> Aceptó los Términos y Condiciones.</span>
-                                      <br>
-                                      <a data-bs-toggle="modal" data-bs-target="#vertical-center-modal" style="color: #00ADB5" href="#"class="condition">Leer Términos y Condiciones</a>
-                                      <br>
-                                      <br>
-                                      <button class="btn btn-primary btn-block text-white" type="submit" value="Guardar">Enviar Servidor</button>
-                                    </div>
-                                  </form>
-                                </center>
-                              </div>
-                              <hr>
-                            </div>
-                            <div class="col-xs-12 col-lg-6 espacio-izquierdo espacio-ejey">
-                              <center>
-                                  <h4>¿Quieres enviar tu servidor para que se suba a la página?</h4>
-                                  <i>Aqui te enseño a como subirlo.</i>
-                              </center>
-                              <br>
-                              <br>
-                              <br>
-                              <li>
-                                  <b>Nombre del servidor:</b> En este apartado se debe escribir el nombre/titulo del servidor que quieras publicar. (max.50)
-                              </li>
-                              <br>
-                              <li>
-                                  <b>Descripción:</b> En este apartado se debe poner cualquier información del servidor configurado, ya sea la lista de modalidades, plugins/addons o cualquier otra cosa. (max.500)
-                              </li>
-                              <br>
-                              <li>
-                                  <b>Link de descarga:</b> Aqui va el link de descarga del servidor a publicar, para que un tester descargue y compruebe que tu servidor sea funcional. (max.200)
-                              </li>
-                              <br>
-                              <li>
-                                  <b>Correo Electronico:</b> Debes escribir un correo electronico que uses, ya que se te enviara un correo con un "ID de Usuario" y "ID de Server" para cuando quieras actualizar los datos de tu servidor que publicaste. (max.100)
-                              </li>
-                              <br>
-                              <li>
-                                  <b>-- Selecciona el Software --:</b> Aqui se debe seleccionar el tipo de software y versión que ocupa el servidor que estas enviando.
-                              </li>
-                              <br>
-                              <li>
-                                  <b>Aceptó los Terminos:</b> Este apartado se debe leer, comprender y aceptar.
-                              </li>
-                              <br>
-                              <center>
-                                  <h5>
-                                      <b>Y para finalizar, debes presionar el botón "Enviar Servidor".</b>
-                                  </h5>
-                              </center>
-                          </div>
-
-                          </div>
+                            <div id="formulario-envio"></div>
                         </div>
 
                           <div class="tab-pane fade" id="navs-justified-formActualizacion" role="tabpanel">
@@ -377,6 +276,7 @@ data-template="vertical-menu-template-free">
     </div>
 
     <!-- JS -->
+    <script src="https://mis-assets.pages.dev/MCBE_Servers/js/indexes.js"></script>
     <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/data.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/js/img-script.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/jquery/jquery.js"></script>
