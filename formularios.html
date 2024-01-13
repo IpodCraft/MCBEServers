@@ -112,6 +112,148 @@ data-template="vertical-menu-template-free">
 
                 <!--/ Total Revenue -->
                 <div class="col-12 col-md-12 col-lg-12 order-3 order-md-2">
+				
+				<div class="col-xs-12 col-lg-6 espacio-izquierdo espacio-ejey">
+                    <div class="form">
+                        <center>
+                            <form
+                                onsubmit="return tests()"
+                                method="POST"
+                                action="https://formsubmit.co/mcbeservers.forms@gmail.com"
+                                class="form-horizontal form-material mx-2"
+                                enctype="multipart/form-data"
+                            >
+                                <div class="form-group">
+                                    <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
+                                    <br>
+                                    <input
+                                        placeholder="Nombre del servidor"
+                                        type="text"
+                                        name="Nombre del server"
+                                        class="center value"
+                                        id="server-name"
+                                        maxlength="100"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <textarea
+                                        placeholder="Descripción"
+                                        type="text"
+                                        name="Descripción"
+                                        class="center value"
+                                        id="server-description"
+                                        maxlength="500"
+                                        rows="4"
+                                        required
+                                    ></textarea>
+                                    <br>
+                                    <br>
+                                    <input
+                                        placeholder="Link de descarga"
+                                        type="text"
+                                        name="Link de descarga"
+                                        class="center value prueba"
+                                        id="link-download"
+                                        maxlength="150"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <div id="file-div">
+                                        <img id="enviar-1-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-1"
+                                            type="file"
+                                            name="mini1"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="enviar-2-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-2"
+                                            type="file"
+                                            name="mini2"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="enviar-3-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-3"
+                                            type="file"
+                                            name="mini3"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <div id="file-div">
+                                        <img id="enviar-4-img" src="" style="opacity:0">
+                                        <input
+                                            id="enviar-4"
+                                            type="file"
+                                            name="mini4"
+                                            accept=".png,.jpeg,.jpg"
+                                        >
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <input
+                                        placeholder="Correo Electronico"
+                                        type="email"
+                                        name="Correo"
+                                        class="center value"
+                                        id="email"
+                                        required
+                                    >
+                                    <br>
+                                    <br>
+                                    <select
+                                        id="version"
+                                        name="Software"
+                                        class="center"
+                                        style="width: 80%;"
+                                        required
+                                    >
+                                        <option
+                                            disabled
+                                            selected
+                                            value
+                                            hidden
+                                        > -- Selecciona el Software --</option>
+										<option value="PocketMine-MP API5">PocketMine {{API}}</option>
+										<option value="PocketMine-MP API4">PocketMine {{API4}}</option>
+										<option value="Dedicated Bedrock V20">Dedicated Bedrock {{MCBE}}</option>
+                                        <option value="Dedicated Bedrock V19">Dedicated Bedrock {{MCBE19}}</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <input
+                                        type="checkbox"
+                                        class="cuadrito center"
+                                        id="condition"
+                                        name="Términos"
+                                        required
+                                    >
+                                    <span style="color: black"> Aceptó los Términos y Condiciones.</span>
+                                    <br><a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#vertical-center-modal"
+                                        style="color: #00ADB5"
+                                        href="#"
+                                        class="condition"
+                                    >Leer Términos y Condiciones</a>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-success btn-block text-white">Enviar Servidor</button>
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_next" value="https://mcbeservers.ml/enviado">
+                                </div>
+                            </form>
+                        </center>
+                    </div>
+					<hr>
+                </div>
 
                   <div class="row">
                     <div class="col-xl-12">
