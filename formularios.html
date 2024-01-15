@@ -126,12 +126,17 @@ data-template="vertical-menu-template-free">
                         <ul class="nav nav-tabs nav-fill" role="tablist">
                           <li class="nav-item">
                             <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-formEnvio" aria-controls="navs-justified-formEnvio" aria-selected="TRUE">
-                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/FES.png"><span class="d-none d-sm-block"> Formulario de Envio</span>
+                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/FES.png"><span class="d-none d-sm-block"> Formulario de Envio (Server)</span>
                             </button>
                           </li>
                           <li class="nav-item">
                             <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-formActualizacion" aria-controls="navs-justified-formActualizacion" aria-selected="false">
-                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/FAS.png"><span class="d-none d-sm-block"> Formulario de Actualización</span>
+                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/FAS.png"><span class="d-none d-sm-block"> Formulario de Actualización (Server)</span>
+                            </button>
+                          </li>
+                          <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-formPlugin" aria-controls="navs-justified-formPlugin" aria-selected="false">
+                              <img style="width: 1.75rem;" class="tf-icons me-1" src="https://mis-assets.pages.dev/MCBE_Servers/images/FAS.png"><span class="d-none d-sm-block"> Formulario de Plugins</span>
                             </button>
                           </li>
                         </ul>
@@ -303,6 +308,117 @@ data-template="vertical-menu-template-free">
                                 <hr>
                                   <center>
                                       <h4>¿Quieres actualizar un servidor que publicaste con anterioridad?</h4>
+                                      <i>Aqui te enseño a como actualizar los datos.</i>
+                                  </center>
+                                  <br>
+                                  <br>
+                                  <br>
+                                  <li>
+                                      <b>Nombre del servidor:</b> En este apartador puedes ocupar el mismo nombre  del servidor o cambiarlo. (max.50)
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <b>Descripción:</b> Aqui puedes actualizar la descripción de tu servidor. (max.500)
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <b>Link de descarga:</b> Aqui va el link de descarga del servidor a actualizar, para que un tester descargue y compruebe que tu servidor sea funcional. (max.200)
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <b>Correo Electronico:</b> Si ya no cuentas con el correo electronico con el que enviaste el servidor que quieres actualizar, puedes ocupar uno diferente, ya que para comprobar que es tu servidor, se debe usar el "ID de Usuario" y "ID de Server" que se te envio cuando fue publicado. (max.100)
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <b>ID de Usuario:</b> Aqui se debe poner el ID de Usuario que se te proporcionó en tu correo electronico cuando enviaste por primera vez el servidor que estas por actualizar. (Este dato es privado)
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <b>ID de Server:</b> Aqui se debe poner el ID de Server que se te proporcionó en tu correo electronico cuando enviaste por primera vez el servidor que estas por actualizar. (Este dato es privado)
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <b>-- Selecciona el Software --:</b> Aqui se debe seleccionar el tipo de software y versión que ocupa el servidor que estas actualizando.
+                                  </li>
+                                  <br>
+                                  <li>
+                                      <b>Aceptó los Terminos:</b> Este apartado se debe leer, comprender y aceptar.
+                                  </li>
+                                  <br>
+                                  <center>
+                                      <h5>
+                                          <b>Y para finalizar, debes presionar el botón "Actualizar Servidor".</b>
+                                      </h5>
+                                  </center>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="tab-pane fade" id="navs-justified-formPlugin" role="tabpanel">
+                            <div class="row">
+                              <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
+                                
+                                <div class="form">
+                                  <center>
+                                    <form class="form-horizontal form-material mx-2" action="https://pjs13.000webhostapp.com/mcbeserver-plugin.php" method="POST" enctype="multipart/form-data">
+                                      <div class="form-group">
+                                        <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
+                                        <input maxlength="50" required placeholder="Nombre del servidor" class="center value" type="text" name="nombre">
+                                        <br><br>
+                                        <textarea maxlength="500" required placeholder="Descripción" class="center value" rows="4" type="text" name="descripcion"></textarea>
+                                        <br><br>
+                                        <input maxlength="200" required placeholder="Link de descarga" class="center value" type="text" name="link">
+                                        <br><br>
+                                        <div id="file-div">
+                                          <img id="actualizar-1-img" src="" style="opacity:0">
+                                          <input required id="actualizar-1" type="file" name="mini1" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <div id="file-div">
+                                          <img id="actualizar-2-img" src="" style="opacity:0">
+                                          <input required id="actualizar-2" type="file" name="mini2" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <div id="file-div">
+                                          <img id="actualizar-3-img" src="" style="opacity:0">
+                                          <input required id="actualizar-3" type="file" name="mini3" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <div id="file-div">
+                                          <img id="actualizar-4-img" src="" style="opacity:0">
+                                          <input required id="actualizar-4" type="file" name="mini4" accept=".png, .jpeg, .jpg">
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <input maxlength="100" required placeholder="Correo Electronico" class="center value" type="email" name="correo">
+                                        <br>
+                                        <br>
+                                        <input maxlength="9" required placeholder="ID de Usuario" class="form-izquierda value2" type="text"name="usuario_id">
+                                        <input maxlength="6" required placeholder="ID de Server" class="form-derecha value2" type="text" name="server_id">
+                                        <br>
+                                        <br>
+                                        <select style="width: 80%;" required class="center" name="software">
+                                          <option disabled selected value hidden>-- Selecciona el Software --</option>
+                                          <option value="PocketMine-MP API5">PocketMine {{API}}</option>
+                                          <option value="PocketMine-MP API4">PocketMine {{API4}}</option>
+                                          <option value="BDS v1.20.X">Dedicated Bedrock {{MCBE}}</option>
+                                          <option value="BDS v1.19.X">Dedicated Bedrock {{MCBE19}}</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input required class="cuadrito center" type="checkbox" name="terminos">
+                                        <span style="color: black"> Aceptó los Términos y Condiciones.</span>
+                                        <br>
+                                        <a data-bs-toggle="modal" data-bs-target="#modalScrollable" style="color: #00ADB5" href="javascript:void(0);" class="condition">Leer Términos y Condiciones</a>
+                                        <br>
+                                        <br>
+                                        <button class="btn btn-primary btn-block text-white" type="submit" value="Guardar">Enviar Servidor</button>
+                                      </div>
+                                    </form>
+                                  </center>
+                                </div>
+                              </div>
+                          
+                              <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                <hr>
+                                  <center>
+                                      <h4>¿Quieres publicar un plugin de PocketMine?</h4>
                                       <i>Aqui te enseño a como actualizar los datos.</i>
                                   </center>
                                   <br>
