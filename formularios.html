@@ -152,8 +152,27 @@ data-template="vertical-menu-template-free">
                                       <img src="https://mis-assets.pages.dev/MCBE_Servers/images/formlogo.png" class="center value" id="server-logo">
                                       <input maxlength="50" required placeholder="Nombre del servidor" class="center value" type="text" name="nombre">
                                       <br><br>
-                                      <textarea maxlength="500" required placeholder="Descripción" class="center value" rows="4" type="text" name="descripcion"></textarea>
-                                      <br><br>
+                                      <script src="https://cdn.tiny.cloud/1/pkqb6r0qe9oreg18li8p6vdwrltecjido0cjkqg7a7cfq3xm/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+            <script>
+              tinymce.init({
+                selector: '#descripcionEstilos',
+                menubar: '',
+                width: 600,
+                height: 300,
+                plugins: ['autolink']
+              });
+            </script>
+            <style>
+              #editor-container {
+                width: 100%;
+                overflow: hidden;
+                clip-path: polygon(0 0, 100% 0, 100% 94%, 0 95%);
+               }
+            </style>
+          <div id="editor-container">
+            <textarea id="descripcionEstilos"></textarea>
+          </div>
+          <br><br>
                                       <input maxlength="200" required placeholder="Link de descarga" class="center value" type="text" name="link">
                                       <br><br>
                                       <div id="file-div">
