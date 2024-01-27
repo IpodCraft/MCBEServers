@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Equipo | MCBE Servers</title>
+    <title>Plugins | MCBE Servers</title>
     <meta name="description" content="" />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="https://mis-assets.pages.dev/MCBE_Servers/images/favicon.png" />
@@ -25,17 +25,40 @@
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/js/helpers.js"></script>
   </head>
 
+  <style>
+    .logo-navbar {
+      width: 180px;
+      max-width: 100%;
+    }
+    .plugin-logo {
+      width: 65px;
+      max-width: 100%;
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+      border-radius: 50%;
+    }
+    .titulo-otros {
+      font-size: 19px;
+      text-align: left;
+      font-weight: bold;
+      padding: 0px 0px 0px 0px;
+      margin: 5px 0px 5px 0px;
+    }
+    .plugin-fechas {
+      font-size: 14px;
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    .btn-plugin {
+      margin: 0.50em 0px 0px 0px;
+    }
+  </style>
+
   <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
         <!-- Menu -->
-        <style>
-          .logo-navbar {
-            width: 180px;
-            max-width: 100%;
-          }
-        </style>
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
@@ -123,68 +146,7 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-lg-12 col-md-12 order-1">
-                  <div class="row">
-
-                    <style>
-                      .icono-redsocial {
-                        width: 15px;
-                        max-width: 100%;
-                      }
-                    </style>
-
-                    <div class="col-lg-4 col-md-12 col-sm-12 col-xl-4 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <center>
-                            <img src="https://avatars.githubusercontent.com/u/57160583?v=4" class="rounded-equipo" />
-                            <h3 class="card-title text-nowrap mb-1">IpodCraft</h3>
-                            <hr>
-                            <span class="espacio-badge badge bg-label-info rounded-pill">Creador</span>
-                            <span class="espacio-badge badge bg-label-warning rounded-pill">Tester</span>
-                            <span class="espacio-badge badge bg-label-success rounded-pill">Publicador</span>
-                            <hr>
-                            <a href=""><button class="btn btn-web btn-block mb-2"><i class="fa fa-globe icono-espacio"></i> Página Web</button></a>
-                            <a href=""><button class="btn btn-discord btn-block mb-2"><i class="fab fa-discord icono-espacio"></i> Discord</button></a>
-                            <a href=""><button class="btn btn-youtube btn-block mb-2"><i class="fab fa-youtube icono-espacio"></i> YouTube</button></a>
-                            <a href=""><button class="btn btn-twitch btn-block mb-2"><i class="fab fa-twitch icono-espacio"></i> Twitch</button></a>
-                            <a href=""><button class="btn btn-kick btn-block mb-2"><img class="icono-redsocial icono-espacio" src="https://mis-assets.pages.dev/MCBE_Servers/images/kick-icon.png"> Kick</button></a>
-                          </center>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-12 col-sm-12 col-xl-4 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <center>
-                            <img src="https://avatars.githubusercontent.com/u/88064157?v=4" class="rounded-equipo" />
-                            <h3 class="card-title text-nowrap mb-1">AgaCraft</h3>
-                            <hr>
-                            <span class="espacio-badge badge bg-label-info rounded-pill">Creador</span>
-                            <span class="espacio-badge badge bg-label-danger rounded-pill">Desarrollador</span>
-                            <hr>
-                          </center>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-12 col-sm-12 col-xl-4 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <center>
-                            <img src="https://mis-assets.pages.dev/MCBE_Servers/images/Foxiok010.jpg" class="rounded-equipo" />
-                            <h3 class="card-title text-nowrap mb-1">Foxiok010</h3>
-                            <hr>
-                            <span class="espacio-badge badge bg-label-warning rounded-pill">Tester</span>
-                            <span class="espacio-badge badge bg-label-success rounded-pill">Publicador</span>
-                            <hr>
-                            <h6>Sin redes sociales publicas</h6>
-                          </center>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
+                  <div class="row PLUGINS"></div>
                 </div>
                 <!--/ Total Revenue -->
                 
@@ -211,6 +173,7 @@
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
+    <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/api-plugins.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/js/indexes.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/jquery/jquery.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/popper/popper.js"></script>
