@@ -131,8 +131,18 @@
     </div>
 
     <!-- JS -->
+    <script>
+      function descargarPlugin() {
+          var seleccion = document.getElementById("pluginVersionDescargas").value;
+
+          if (seleccion) {
+              window.location.href = seleccion;
+          }
+      }
+    </script>
     <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/api-plugin.js"></script>
     <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/plugins.json"></script>
+    <script src="https://mis-assets.pages.dev/MCBE_Servers/js/indexes.js"></script>
     <!-- build:js assets/vendor/js/core.js -->
 
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/jquery/jquery.js"></script>
