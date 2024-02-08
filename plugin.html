@@ -140,37 +140,17 @@
           }
       }
     </script>
-	<script>
-	    // Esperar a que la página se cargue completamente
-document.addEventListener("DOMContentLoaded", function() {
-    // Capturar el valor dinámico del script externo
-    var dynamicValue = obtenerValorDinamico();
-
-    // Actualizar el contenido del span con el valor dinámico
-    mostrarValorEnSpan(dynamicValue);
-});
-
-function obtenerValorDinamico() {
-    // Suponiendo que el valor se encuentra en una variable global proporcionada por el script externo
-    return API; // API es la variable que contiene el valor dinámico
-}
-
-function mostrarValorEnSpan(valor) {
-    var span = document.getElementById("dynamicValue");
-    span.textContent = valor;
-}
-	</script>
-	<script src="https://mis-assets.pages.dev/Apis/mcbe_servers/data.js"></script>
     <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/api-plugin.js"></script>
     <script src="https://mis-assets.pages.dev/Apis/mcbe_servers/plugins.json"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/js/indexes.js"></script>
-    <!-- build:js assets/vendor/js/core.js -->
+   
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/jquery/jquery.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/popper/popper.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/js/bootstrap.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/vendor/js/menu.js"></script>
     <script src="https://mis-assets.pages.dev/MCBE_Servers/js/main.js"></script>
+    <script src="https://mis-assets.pages.dev/MCBE_Servers/js/dashboards-analytics.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
